@@ -1,0 +1,69 @@
+name: Weekly 200WMA scan
+
+# Refreshes the scan data in web/public/ once a week and commits it back.
+# 200WMA is a weekly signal (Friday's weekly bar is final), so Sunday is the
+# right cadence — running in the cloud means it happens whether or not your
+# laptop is awake. Trigger manually any time via the "Run workflow" button.
+on:
+  schedule:
+    - cron: "0 8 * * 0"   # Sundays 08:00 UTC (US weekly bar already closed)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write          # allow committing the refreshed data back
+
+concurrency:
+  group: weekly-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install -r python/requirements.txt
+
+      - name: Scan S&P 500
+        run: |
+          python python/wma200_scanner.py --universe sp500 --band 10
+          cp wma200_signals.json web/public/wma200_signals.json
+
+      - name: Scan crypto majors
+        run: |
+          mkdir -p "$RUNNER_TEMP/crypto"
+          cd "$RUNNER_TEMP/crypto"
+          python "$GITHUB_WORKSPACE/python/wma200_scanner.py" --universe crypto --band 10
+          cp wma200_signals.json "$GITHUB_WORKSPACE/web/public/wma200_signals_crypto.json"
+
+      # Per-name base rates are network-heavy (full history per ticker). If Yahoo
+      # throttles the runner, don't fail the whole job — keep last week's file.
+      - name: Per-name base rates
+        continue-on-error: true
+        run: python python/gen_base_rates.py
+
+      - name: Append breadth point
+        run: |
+          python python/append_breadth.py \
+            web/public/wma200_signals.json \
+            web/public/breadth_history.json
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/public/wma200_signals.json \
+                  web/public/wma200_signals_crypto.json \
+                  web/public/base_rates.json \
+                  web/public/breadth_history.json
+          if git diff --staged --quiet; then
+            echo "No data changes this run."
+          else
+            git commit -m "chore(data): weekly 200WMA scan $(date -u +%F) [skip ci]"
+            git push
+          fi
