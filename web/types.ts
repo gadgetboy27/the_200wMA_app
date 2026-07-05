@@ -63,3 +63,20 @@ export interface BreadthHistory {
   generated?: string;
   series: { date: string; pct_above_200wma: number }[];
 }
+
+// web/public/enrichment.json — Wyckoff-flavoured volume + spring confirmation.
+export interface Spring {
+  happened: boolean;
+  weeks_ago: number | null;
+  depth_pct: number | null;
+}
+export interface Enrichment {
+  vol_ratio: number | null; // latest weekly volume / 50-week median
+  vol_confirms: boolean;
+  spring: Spring;
+}
+export interface Enrichments {
+  lookback_weeks: number;
+  vol_confirm_threshold: number;
+  tickers: Record<string, Enrichment | undefined>;
+}

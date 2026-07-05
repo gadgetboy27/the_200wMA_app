@@ -247,6 +247,29 @@ h1 {
 .tag-caution { background: #2a1f0a; color: var(--amber-dark); border: 1px solid #6b4e1a; }
 .tag-avoid { background: #2d1216; color: var(--red); border: 1px solid #6b2430; }
 
+/* --- Confirmation chips (volume / spring) --- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 2px;
+}
+.chip {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-weight: 700;
+  background: #141c26;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.chip-on { background: #0d2b1c; color: var(--green); border-color: #1e5c3c; }
+.chip-warn { background: #2a2410; color: var(--amber); border-color: #6b5a1a; }
+.chip-off { background: #141c26; color: var(--muted); border-color: var(--border); }
+
 /* --- Nav / tabs --- */
 .nav {
   display: flex;

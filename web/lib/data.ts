@@ -3,6 +3,7 @@ import path from "node:path";
 import type {
   BaseRates,
   BreadthHistory,
+  Enrichments,
   ScanResult,
   Universe,
 } from "@/types";
@@ -41,4 +42,8 @@ export async function loadBaseRates(): Promise<BaseRates | null> {
 
 export async function loadBreadthHistory(): Promise<BreadthHistory | null> {
   return readJson<BreadthHistory>("breadth_history.json");
+}
+
+export async function loadEnrichments(): Promise<Enrichments | null> {
+  return readJson<Enrichments>("enrichment.json");
 }

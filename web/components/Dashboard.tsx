@@ -4,6 +4,8 @@ import type {
   BaseRate,
   BaseRates,
   BreadthHistory,
+  Enrichment,
+  Enrichments,
   ScanResult,
   Signal,
   SignalType,
@@ -36,11 +38,37 @@ function pct(n: number): string {
 // historical base rate (does buying this level actually pay off for THIS name?)
 // into a plain-language "why this is / isn't a good buy". No company name — the
 // verdict is built from price behaviour and history only, on purpose.
+// A fresh spring (this week or last) off the 200WMA, confirmed by above-median
+// volume, is the Wyckoff-style "demand showed up at support" tell.
+function freshSpring(e: Enrichment | null): boolean {
+  return !!e && e.spring.happened && (e.spring.weeks_ago ?? 99) <= 1;
+}
+function confirmClause(sig: Signal, e: Enrichment | null): string {
+  if (!e) return "";
+  const rising = sig.ma_slope_13w_pct > 0;
+  const spring = freshSpring(e);
+  const vr = e.vol_ratio;
+  if (spring && e.vol_confirms)
+    return ` Confirmation: sprang back above the MA within the last week on ${vr}× median volume — demand showed up at support.`;
+  if (spring && !e.vol_confirms)
+    return ` Note: a spring off the MA, but on light volume (${vr}× median) — the reclaim isn't confirmed by demand yet.`;
+  if (rising && vr !== null && !e.vol_confirms)
+    return ` Volume is light (${vr}× median) — effort isn't confirming the move.`;
+  if (rising && e.vol_confirms)
+    return ` Volume ${vr}× median backs the move.`;
+  return "";
+}
+
 type Verdict = "constructive" | "mixed" | "weak";
-function evidence(sig: Signal, br: BaseRate | null): { verdict: Verdict; text: string } {
+function evidence(
+  sig: Signal,
+  br: BaseRate | null,
+  enr: Enrichment | null,
+): { verdict: Verdict; text: string } {
   const rising = sig.ma_slope_13w_pct > 0;
   const thin = br ? br.touches < 15 : false;
   const thinNote = thin ? " History here is thin — treat as weak evidence." : "";
+  const cc = confirmClause(sig, enr);
 
   if (!rising) {
     // A falling 200WMA is support that tends to break.
@@ -49,31 +77,31 @@ function evidence(sig: Signal, br: BaseRate | null): { verdict: Verdict; text: s
       : "";
     return {
       verdict: "weak",
-      text: `MA falling (13w) — a declining 200WMA is support that usually breaks, not a floor.${hist}${thinNote}`,
+      text: `MA falling (13w) — a declining 200WMA is support that usually breaks, not a floor.${hist}${thinNote}${cc}`,
     };
   }
   // Rising MA: the setup is fine — let the base rate decide the verdict.
   if (!br) {
     return {
       verdict: "mixed",
-      text: `Uptrend intact (MA rising), but there's no usable 200WMA history for this name — no evidence either way. Size small.${thinNote}`,
+      text: `Uptrend intact (MA rising), but there's no usable 200WMA history for this name — no evidence either way. Size small.${thinNote}${cc}`,
     };
   }
   if (br.edge_pct > 2) {
     return {
       verdict: "constructive",
-      text: `Uptrend intact AND buying its 200WMA has historically beaten this name's own baseline by ${pct(br.edge_pct)} (${br.win_pct.toFixed(0)}% win, ${br.touches} touches). Evidence supports a dip-buy — but survivorship + overlap flatter this.${thinNote}`,
+      text: `Uptrend intact AND buying its 200WMA has historically beaten this name's own baseline by ${pct(br.edge_pct)} (${br.win_pct.toFixed(0)}% win, ${br.touches} touches). Evidence supports a dip-buy — but survivorship + overlap flatter this.${thinNote}${cc}`,
     };
   }
   if (br.edge_pct >= -1) {
     return {
       verdict: "mixed",
-      text: `Uptrend intact, but its 200WMA touches have only matched baseline (${pct(br.edge_pct)}, ${br.win_pct.toFixed(0)}% win). The line looks like support but hasn't paid as an entry here.${thinNote}`,
+      text: `Uptrend intact, but its 200WMA touches have only matched baseline (${pct(br.edge_pct)}, ${br.win_pct.toFixed(0)}% win). The line looks like support but hasn't paid as an entry here.${thinNote}${cc}`,
     };
   }
   return {
     verdict: "mixed",
-    text: `Uptrend intact, yet historically its 200WMA touches UNDER-performed this name's own baseline (${pct(br.edge_pct)}). The setup looks good; the evidence says this line isn't a reliable buy trigger for it.${thinNote}`,
+    text: `Uptrend intact, yet historically its 200WMA touches UNDER-performed this name's own baseline (${pct(br.edge_pct)}). The setup looks good; the evidence says this line isn't a reliable buy trigger for it.${thinNote}${cc}`,
   };
 }
 
@@ -154,16 +182,37 @@ const VERDICT_LABEL: Record<Verdict, string> = {
   weak: "Evidence: weak",
 };
 
+function ConfirmChips({ e }: { e: Enrichment }) {
+  const spring = e.spring.happened;
+  const fresh = spring && (e.spring.weeks_ago ?? 99) <= 1;
+  return (
+    <div className="chips">
+      <span className={`chip ${e.vol_confirms ? "chip-on" : "chip-off"}`} title="Latest weekly volume vs its 50-week median (Wyckoff effort/result)">
+        VOL {e.vol_ratio === null ? "—" : `${e.vol_ratio.toFixed(2)}×`}
+        {e.vol_confirms ? " ✓" : ""}
+      </span>
+      {spring && (
+        <span className={`chip ${fresh && e.vol_confirms ? "chip-on" : fresh ? "chip-warn" : "chip-off"}`} title="Weekly low pierced the 200WMA then closed back above it — a false breakdown of long-term support">
+          SPRING {e.spring.weeks_ago === 0 ? "this wk" : `${e.spring.weeks_ago}w ago`}
+          {e.spring.depth_pct !== null ? ` (${e.spring.depth_pct.toFixed(1)}%)` : ""}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function SignalCard({
   sig,
   baseRate,
+  enr,
   horizon,
 }: {
   sig: Signal;
   baseRate: BaseRate | null;
+  enr: Enrichment | null;
   horizon: number;
 }) {
-  const ev = evidence(sig, baseRate);
+  const ev = evidence(sig, baseRate, enr);
   const cls = classify(sig);
   const slopeClass = sig.ma_slope_13w_pct >= 0 ? "pos" : "neg";
   const distClass = sig.dist_pct >= 0 ? "pos" : "neg";
@@ -175,6 +224,7 @@ function SignalCard({
       </div>
       <div className={`tag tag-${cls.tier}`}>{cls.label}</div>
       <Sparkline chart={sig.chart} />
+      {enr && <ConfirmChips e={enr} />}
       <div className="stats">
         <div>
           <label>Price</label>
@@ -253,14 +303,17 @@ export default function Dashboard({
   data,
   baseRates,
   breadthHistory,
+  enrichments,
 }: {
   universe: Universe;
   data: ScanResult;
   baseRates: BaseRates | null;
   breadthHistory: BreadthHistory | null;
+  enrichments: Enrichments | null;
 }) {
   const { breadth, signals } = data;
   const horizon = baseRates?.horizon_weeks ?? 26;
+  const enrFor = (t: string): Enrichment | null => enrichments?.tickers?.[t] ?? null;
 
   const ranked = [...signals].sort((a, b) => {
     const ca = classify(a);
@@ -329,7 +382,13 @@ export default function Dashboard({
               </div>
               <div className="grid">
                 {rows.map((sig) => (
-                  <SignalCard key={sig.ticker} sig={sig} baseRate={brFor(sig.ticker)} horizon={horizon} />
+                  <SignalCard
+                    key={sig.ticker}
+                    sig={sig}
+                    baseRate={brFor(sig.ticker)}
+                    enr={enrFor(sig.ticker)}
+                    horizon={horizon}
+                  />
                 ))}
               </div>
             </section>

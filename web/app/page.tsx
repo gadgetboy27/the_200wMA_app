@@ -1,12 +1,13 @@
 import Nav from "@/components/Nav";
 import Dashboard from "@/components/Dashboard";
-import { loadScan, loadBaseRates, loadBreadthHistory } from "@/lib/data";
+import { loadScan, loadBaseRates, loadBreadthHistory, loadEnrichments } from "@/lib/data";
 
 export default async function SP500Page() {
-  const [data, baseRates, breadthHistory] = await Promise.all([
+  const [data, baseRates, breadthHistory, enrichments] = await Promise.all([
     loadScan("sp500"),
     loadBaseRates(),
     loadBreadthHistory(),
+    loadEnrichments(),
   ]);
   return (
     <main>
@@ -16,6 +17,7 @@ export default async function SP500Page() {
         data={data}
         baseRates={baseRates}
         breadthHistory={breadthHistory}
+        enrichments={enrichments}
       />
     </main>
   );

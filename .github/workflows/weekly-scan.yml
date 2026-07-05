@@ -47,6 +47,12 @@ jobs:
         continue-on-error: true
         run: python python/gen_base_rates.py
 
+      # Volume + spring confirmation for the current signals. Network-heavy like
+      # base rates, so don't fail the job — keep last week's enrichment on error.
+      - name: Volume + spring enrichment
+        continue-on-error: true
+        run: python python/gen_enrichment.py
+
       - name: Append breadth point
         run: |
           python python/append_breadth.py \
@@ -60,6 +66,7 @@ jobs:
           git add web/public/wma200_signals.json \
                   web/public/wma200_signals_crypto.json \
                   web/public/base_rates.json \
+                  web/public/enrichment.json \
                   web/public/breadth_history.json
           if git diff --staged --quiet; then
             echo "No data changes this run."

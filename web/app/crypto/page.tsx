@@ -1,11 +1,12 @@
 import Nav from "@/components/Nav";
 import Dashboard from "@/components/Dashboard";
-import { loadScan, loadBaseRates } from "@/lib/data";
+import { loadScan, loadBaseRates, loadEnrichments } from "@/lib/data";
 
 export default async function CryptoPage() {
-  const [data, baseRates] = await Promise.all([
+  const [data, baseRates, enrichments] = await Promise.all([
     loadScan("crypto").catch(() => null),
     loadBaseRates(),
+    loadEnrichments(),
   ]);
   // Breadth-history trend is S&P-only for now (the historical breadth job runs
   // over the index); crypto shows the current breadth number without the trend.
@@ -18,6 +19,7 @@ export default async function CryptoPage() {
           data={data}
           baseRates={baseRates}
           breadthHistory={null}
+          enrichments={enrichments}
         />
       ) : (
         <p className="empty">
