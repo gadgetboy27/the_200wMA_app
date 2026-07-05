@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  macOS launchd job: run the weekly 200WMA scan every Sunday at 08:00 local time.
+  launchd (unlike cron) will run the job at the next wake if the Mac was asleep
+  at the scheduled time, so a laptop that isn't on at 8am Sunday still refreshes.
+
+  Install:
+    cp scripts/com.wma200.weekly.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.wma200.weekly.plist
+  Run once now to test:
+    launchctl start com.wma200.weekly
+  Remove:
+    launchctl unload ~/Library/LaunchAgents/com.wma200.weekly.plist
+    rm ~/Library/LaunchAgents/com.wma200.weekly.plist
+
+  NOTE: edit the two ABSOLUTE paths below if you move the repo.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.wma200.weekly</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/gadgetboy/Development/the_200wMA_app/scripts/weekly_scan.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>0</integer>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/gadgetboy/Development/the_200wMA_app/scripts/weekly_scan.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/gadgetboy/Development/the_200wMA_app/scripts/weekly_scan.log</string>
+</dict>
+</plist>

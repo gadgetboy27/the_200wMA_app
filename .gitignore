@@ -1,0 +1,32 @@
+# Python
+python/.venv/
+__pycache__/
+*.pyc
+
+# Scanner artifacts written into the CWD when running the Python engine directly
+# (root or python/). The frontend copies of these live under web/public/ and ARE
+# tracked so the app renders real data on a fresh clone.
+/wma200_signals.csv
+/wma200_signals.json
+/wma200_report.html
+/python/wma200_signals.csv
+/python/wma200_signals.json
+/python/wma200_report.html
+
+# Node / TypeScript
+node_modules/
+ts/dist/
+web/.next/
+web/out/
+*.tsbuildinfo
+
+# Scheduler log
+scripts/weekly_scan.log
+
+# Local Claude Code settings (machine-specific permissions — not for the repo)
+.claude/settings.local.json
+
+# Env / editor
+.env
+.env.local
+.DS_Store

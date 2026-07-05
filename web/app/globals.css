@@ -1,0 +1,365 @@
+/* Dark theme mirroring the Python HTML report (wma200_scanner.py). */
+
+:root {
+  --bg: #0b0f14;
+  --card: #121924;
+  --border: #1f2b3a;
+  --text: #d7dde4;
+  --text-bright: #e8eef4;
+  --muted: #5c6a78;
+  --green: #4fd08a;
+  --red: #f06a6a;
+  --amber: #e8c45a;
+  --amber-dark: #c98a3a;
+  --blue: #4fa8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 "SF Mono", Menlo, Consolas, monospace;
+  margin: 0;
+  padding: 32px;
+}
+
+h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #7fd4a8;
+  margin: 0 0 4px;
+}
+
+.sub {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* Breadth strip -------------------------------------------------------- */
+.breadth {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.tile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 20px;
+  min-width: 150px;
+}
+
+.tile b {
+  display: block;
+  font-size: 22px;
+  color: var(--text-bright);
+}
+
+.tile label {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Breadth band coloring on the "% above 200WMA" tile. */
+.tile.band-green b {
+  color: var(--green);
+}
+.tile.band-amber b {
+  color: var(--amber);
+}
+.tile.band-amber-dark b {
+  color: var(--amber-dark);
+}
+.tile.band-red b {
+  color: var(--red);
+}
+
+/* Legend --------------------------------------------------------------- */
+.legend {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.legend .px {
+  color: var(--blue);
+}
+.legend .ma {
+  color: var(--amber);
+}
+
+/* Signal card grid ----------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tick {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+.badge.up {
+  background: #0d2b1c;
+  color: var(--green);
+  border: 1px solid #1e5c3c;
+}
+.badge.down {
+  background: #2d1216;
+  color: var(--red);
+  border: 1px solid #6b2430;
+}
+.badge.near {
+  background: #2a2410;
+  color: var(--amber);
+  border: 1px solid #6b5a1a;
+}
+
+.chart {
+  width: 100%;
+  height: 150px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Stats block ---------------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.stats label {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pos {
+  color: var(--green);
+}
+.neg {
+  color: var(--red);
+}
+
+/* Make the slope stat visually prominent — it's the buy-vs-trap qualifier. */
+.slope {
+  font-weight: 700;
+}
+
+.slope-note {
+  margin-top: 10px;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+.slope-note.healthy {
+  background: #0d2b1c;
+  color: var(--green);
+  border: 1px solid #1e5c3c;
+}
+.slope-note.risk {
+  background: #2d1216;
+  color: var(--red);
+  border: 1px solid #6b2430;
+}
+
+/* --- Tier sections (actionable at top, traps at bottom) --- */
+.tier {
+  margin-bottom: 34px;
+  border-left: 3px solid #1f2b3a;
+  padding-left: 16px;
+}
+.tier.sec-entry { border-left-color: var(--green); }
+.tier.sec-watch { border-left-color: var(--amber); }
+.tier.sec-caution { border-left-color: var(--amber-dark); }
+.tier.sec-avoid { border-left-color: var(--red); }
+
+.tier-head { margin-bottom: 14px; }
+.tier-head h2 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 3px;
+  color: #e8eef4;
+}
+.tier-count {
+  display: inline-block;
+  font-size: 12px;
+  background: #1f2b3a;
+  color: #9fb0c0;
+  border-radius: 20px;
+  padding: 1px 9px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.tier-blurb {
+  margin: 0;
+  font-size: 12px;
+  color: #5c6a78;
+  max-width: 70ch;
+}
+
+/* --- Per-card classification tag --- */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.tag-entry { background: #0d2b1c; color: var(--green); border: 1px solid #1e5c3c; }
+.tag-watch { background: #2a2410; color: var(--amber); border: 1px solid #6b5a1a; }
+.tag-caution { background: #2a1f0a; color: var(--amber-dark); border: 1px solid #6b4e1a; }
+.tag-avoid { background: #2d1216; color: var(--red); border: 1px solid #6b2430; }
+
+/* --- Nav / tabs --- */
+.nav {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.tabs { display: flex; gap: 8px; }
+.tab {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #5c6a78;
+  padding: 4px 14px;
+  border: 1px solid #1f2b3a;
+  border-radius: 20px;
+}
+.tab.on { color: #0b0f14; background: var(--green); border-color: var(--green); font-weight: 700; }
+.tab:hover { color: #e8eef4; }
+
+/* --- Breadth trend chart --- */
+.trend {
+  background: #121924;
+  border: 1px solid #1f2b3a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 26px;
+}
+.trend-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.trend-head label { color: #5c6a78; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.trend-now { color: var(--green); font-weight: 700; }
+.trend-svg { width: 100%; height: 160px; display: block; }
+.trend-svg .trend-line { fill: none; stroke: #4fa8f0; stroke-width: 1.6; }
+.trend-svg .mid { stroke: #2a3648; stroke-width: 1; stroke-dasharray: 2 4; }
+.trend-svg .guide { stroke: #3a2a1a; stroke-width: 1; stroke-dasharray: 4 4; }
+.trend-svg .zone-washout { fill: rgba(240, 106, 106, 0.07); }
+.trend-svg .zone-euphoria { fill: rgba(232, 196, 90, 0.06); }
+.trend-foot { display: flex; justify-content: space-between; font-size: 11px; color: #5c6a78; margin-top: 4px; }
+.trend-foot .muted { color: #45505c; }
+
+/* --- Per-card base-rate row --- */
+.baserate {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #9fb0c0;
+  border-top: 1px dashed #1f2b3a;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.baserate .br-label {
+  display: inline-block;
+  color: #5c6a78;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9px;
+  margin-right: 6px;
+}
+
+.empty { color: #9fb0c0; background: #121924; border: 1px solid #1f2b3a; border-radius: 8px; padding: 16px; }
+.empty code { color: var(--amber); background: #0b0f14; padding: 1px 5px; border-radius: 4px; }
+
+/* --- Per-card evidence verdict --- */
+.verdict {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #1f2b3a;
+}
+.verdict .v-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+.verdict.v-constructive { background: #0d2b1c; border-color: #1e5c3c; color: #cde5d8; }
+.verdict.v-constructive .v-label { color: var(--green); }
+.verdict.v-mixed { background: #2a2410; border-color: #6b5a1a; color: #ece1c4; }
+.verdict.v-mixed .v-label { color: var(--amber); }
+.verdict.v-weak { background: #2d1216; border-color: #6b2430; color: #f0d2d6; }
+.verdict.v-weak .v-label { color: var(--red); }
+
+/* --- Aggregate evidence panel (answers the buy-timing question) --- */
+.evpanel {
+  background: #121924;
+  border: 1px solid #1f2b3a;
+  border-left: 3px solid #4fa8f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 26px;
+  max-width: 78ch;
+}
+.evpanel-h {
+  font-size: 14px;
+  color: #e8eef4;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.evpanel p { margin: 0 0 10px; font-size: 13px; color: #b7c2cd; line-height: 1.55; }
+.evpanel b { color: #e8eef4; }
+.evpanel-split { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.evpanel-split > div {
+  flex: 1 1 220px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.ev-good { background: #0d2b1c; border: 1px solid #1e5c3c; color: #cde5d8; }
+.ev-bad { background: #2d1216; border: 1px solid #6b2430; color: #f0d2d6; }
+.evpanel-split b { color: #fff; }
+.evpanel-foot { font-size: 11px; color: #5c6a78 !important; margin-bottom: 0 !important; }

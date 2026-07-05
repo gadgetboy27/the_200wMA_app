@@ -1,0 +1,5 @@
+# 200WMA scanner engine (Python is the correct language for the data/maths layer)
+pandas>=2.0
+numpy>=1.24
+yfinance>=0.2.40      # live Yahoo Finance weekly bars
+lxml>=4.9            # pandas.read_html for the S&P 500 constituents table
