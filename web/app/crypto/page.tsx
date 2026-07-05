@@ -3,11 +3,22 @@ import Dashboard from "@/components/Dashboard";
 import { loadScan, loadBaseRates, loadEnrichments } from "@/lib/data";
 
 export default async function CryptoPage() {
-  const [data, baseRates, enrichments] = await Promise.all([
+  const [scan, baseRates, enrichments] = await Promise.all([
     loadScan("crypto").catch(() => null),
     loadBaseRates(),
     loadEnrichments(),
   ]);
+  // Crypto mandate: only actual 200WMA crosses (up or down). "NEAR" proximity
+  // signals are noise at crypto volatility — a coin can sit near its 200WMA for
+  // months without the cycle turning; the cross IS the event.
+  const data = scan
+    ? {
+        ...scan,
+        signals: scan.signals.filter(
+          (s) => s.signal === "CROSSED UP" || s.signal === "CROSSED DOWN",
+        ),
+      }
+    : null;
   // Breadth-history trend is S&P-only for now (the historical breadth job runs
   // over the index); crypto shows the current breadth number without the trend.
   return (
