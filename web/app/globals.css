@@ -330,6 +330,31 @@ h1 {
   margin-right: 6px;
 }
 
+/* --- Per-card Value Timing (health / value / staged buy plan) --- */
+.valuetiming {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #9fb0c0;
+  border-top: 1px dashed #1f2b3a;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.valuetiming .vt-line + .vt-line {
+  margin-top: 2px;
+}
+.valuetiming .vt-label {
+  display: inline-block;
+  color: #5c6a78;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9px;
+  margin-right: 6px;
+  min-width: 52px;
+}
+.valuetiming .mid {
+  color: var(--amber);
+}
+
 .empty { color: #9fb0c0; background: #121924; border: 1px solid #1f2b3a; border-radius: 8px; padding: 16px; }
 .empty code { color: var(--amber); background: #0b0f14; padding: 1px 5px; border-radius: 4px; }
 

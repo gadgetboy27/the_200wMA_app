@@ -41,6 +41,17 @@ echo "[$STAMP] computing per-name base rates"
 "$PY" "$ROOT/python/gen_base_rates.py"
 
 # ---------------------------------------------------------------------------
+# Volume + spring enrichment -> web/public/enrichment.json
+# Value timing (F-score / valuation z / tranche ladder) -> value_timing.json
+# Both are network-heavy second passes over the current signals; a failure
+# keeps last week's file rather than killing the whole refresh.
+# ---------------------------------------------------------------------------
+echo "[$STAMP] computing volume + spring enrichment"
+"$PY" "$ROOT/python/gen_enrichment.py" || echo "  (enrichment failed — keeping last week's file)"
+echo "[$STAMP] computing value timing (slowest pass: per-ticker statements)"
+"$PY" "$ROOT/python/gen_value_timing.py" || echo "  (value timing failed — keeping last week's file)"
+
+# ---------------------------------------------------------------------------
 # Append THIS week's breadth point to web/public/breadth_history.json.
 # Idempotent: dedup by weekly-bar date so a re-run of the same week overwrites,
 # never duplicates. This does NOT regenerate the full 3-year history — that is
@@ -51,6 +62,6 @@ echo "[$STAMP] appending latest breadth point to breadth_history.json"
   "$ROOT/web/public/wma200_signals.json" \
   "$ROOT/web/public/breadth_history.json"
 
-echo "[$STAMP] done — signals(sp500,crypto), base_rates and breadth_history refreshed in web/public/"
+echo "[$STAMP] done — signals(sp500,crypto), base_rates, enrichment, value_timing and breadth_history refreshed in web/public/"
 echo "[$STAMP] if serving a production build, run 'cd web && npm run build' to re-render;"
 echo "         'npm run dev' picks up the new JSON on next request automatically."

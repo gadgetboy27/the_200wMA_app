@@ -53,6 +53,12 @@ jobs:
         continue-on-error: true
         run: python python/gen_enrichment.py
 
+      # F-score + valuation z + tranche ladder. Slowest generator (per-ticker
+      # statement fetches, ~8-10 min worst case) — keep last week's file on error.
+      - name: Value timing (F-score / valuation / ladder)
+        continue-on-error: true
+        run: python python/gen_value_timing.py
+
       - name: Append breadth point
         run: |
           python python/append_breadth.py \
@@ -67,6 +73,7 @@ jobs:
                   web/public/wma200_signals_crypto.json \
                   web/public/base_rates.json \
                   web/public/enrichment.json \
+                  web/public/value_timing.json \
                   web/public/breadth_history.json
           if git diff --staged --quiet; then
             echo "No data changes this run."

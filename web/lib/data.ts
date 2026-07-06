@@ -6,6 +6,7 @@ import type {
   Enrichments,
   ScanResult,
   Universe,
+  ValueTiming,
 } from "@/types";
 
 const PUBLIC = path.join(process.cwd(), "public");
@@ -46,4 +47,8 @@ export async function loadBreadthHistory(): Promise<BreadthHistory | null> {
 
 export async function loadEnrichments(): Promise<Enrichments | null> {
   return readJson<Enrichments>("enrichment.json");
+}
+
+export async function loadValueTiming(): Promise<ValueTiming | null> {
+  return readJson<ValueTiming>("value_timing.json");
 }

@@ -6,9 +6,12 @@ import type {
   BreadthHistory,
   Enrichment,
   Enrichments,
+  FScoreChecks,
   ScanResult,
   Signal,
   SignalType,
+  ValueTiming,
+  ValueTimingEntry,
   Universe,
 } from "@/types";
 
@@ -182,6 +185,84 @@ const VERDICT_LABEL: Record<Verdict, string> = {
   weak: "Evidence: weak",
 };
 
+// Plain-English names for the 9 Piotroski health checks (tooltip only).
+const CHECK_LABEL: Record<keyof FScoreChecks, string> = {
+  roa: "profitable",
+  cfo: "generating cash",
+  d_roa: "profitability improving",
+  accruals: "cash backs the profits",
+  d_lev: "debt not rising",
+  d_liq: "liquidity improving",
+  shares: "not printing new shares",
+  d_margin: "margins improving",
+  d_turn: "assets working harder",
+};
+
+function healthTitle(checks: FScoreChecks | null): string {
+  if (!checks) return "";
+  const passed: string[] = [];
+  const failed: string[] = [];
+  (Object.keys(CHECK_LABEL) as (keyof FScoreChecks)[]).forEach((k) => {
+    if (checks[k] === true) passed.push(CHECK_LABEL[k]);
+    else if (checks[k] === false) failed.push(CHECK_LABEL[k]);
+  });
+  return (
+    `Piotroski financial-health checks from the last two annual reports. ` +
+    (passed.length ? `Passed: ${passed.join(", ")}. ` : "") +
+    (failed.length ? `Failed: ${failed.join(", ")}.` : "")
+  );
+}
+
+// Value Timing: three independently-gated lines — crypto gets the buy plan
+// only (no financial statements), stocks whose valuation guards all tripped
+// (negative book value, too-thin history) get health + buy plan.
+function ValueTimingRow({ vt }: { vt: ValueTimingEntry }) {
+  const v = vt.valuation;
+  const zWord =
+    v == null ? "" : v.composite_z <= -0.5 ? "cheaper than its usual price" :
+    v.composite_z < 0.5 ? "around its usual price" : "pricier than usual";
+  const zClass =
+    v == null ? "" : v.composite_z <= -0.5 ? "pos" : v.composite_z < 0.5 ? "mid" : "neg";
+  const healthClass =
+    vt.f_score === null || vt.f_max === null ? "" :
+    vt.f_score / vt.f_max >= 0.7 ? "pos" : vt.f_score / vt.f_max >= 0.4 ? "mid" : "neg";
+  return (
+    <div className="valuetiming">
+      {vt.f_score !== null && vt.f_max !== null && (
+        <div className="vt-line" title={healthTitle(vt.checks)}>
+          <span className="vt-label">Health</span>
+          <span>
+            <span className={healthClass}>{vt.f_score}/{vt.f_max}</span> balance-sheet
+            checks passed (Piotroski)
+          </span>
+        </div>
+      )}
+      {v != null && (
+        <div className="vt-line" title={`Today's price-to-earnings / -sales / -book vs this name's own last ~4 years (z-score ${v.composite_z}; ${v.weeks} weeks of history). Free data is thin — treat as a rough read.`}>
+          <span className="vt-label">Value</span>
+          <span>
+            <span className={zClass}>{zWord}</span> (z {v.composite_z > 0 ? "+" : ""}{v.composite_z.toFixed(1)})
+          </span>
+        </div>
+      )}
+      {vt.ladder && (
+        <div className="vt-line" title={`Staged buying: split the position ${vt.ladder.rungs.map((r) => `${r.weight}%`).join(" / ")} instead of all at once. Rung spacing = how deep this name has historically traded below its 200WMA${vt.ladder.basis === "fallback" ? " (little history below the line — default spacing)" : ""}.`}>
+          <span className="vt-label">Buy plan</span>
+          <span>
+            {vt.ladder.rungs.map((r, i) => (
+              <span key={i}>
+                {i > 0 && " · "}
+                {["①", "②", "③"][i]} {fmt(r.price)}
+                {i === 0 ? " at the line" : ` (${r.pct_vs_ma.toFixed(0)}%)`}
+              </span>
+            ))}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ConfirmChips({ e }: { e: Enrichment }) {
   const spring = e.spring.happened;
   const fresh = spring && (e.spring.weeks_ago ?? 99) <= 1;
@@ -205,11 +286,13 @@ function SignalCard({
   sig,
   baseRate,
   enr,
+  vt,
   horizon,
 }: {
   sig: Signal;
   baseRate: BaseRate | null;
   enr: Enrichment | null;
+  vt: ValueTimingEntry | null;
   horizon: number;
 }) {
   const ev = evidence(sig, baseRate, enr);
@@ -243,6 +326,7 @@ function SignalCard({
           <span className={`slope ${slopeClass}`}>{pct(sig.ma_slope_13w_pct)}</span>
         </div>
       </div>
+      {vt && <ValueTimingRow vt={vt} />}
       {baseRate && <BaseRateRow br={baseRate} horizon={horizon} />}
       <div className={`verdict v-${ev.verdict}`}>
         <span className="v-label">{VERDICT_LABEL[ev.verdict]}</span>
@@ -304,16 +388,19 @@ export default function Dashboard({
   baseRates,
   breadthHistory,
   enrichments,
+  valueTiming,
 }: {
   universe: Universe;
   data: ScanResult;
   baseRates: BaseRates | null;
   breadthHistory: BreadthHistory | null;
   enrichments: Enrichments | null;
+  valueTiming: ValueTiming | null;
 }) {
   const { breadth, signals } = data;
   const horizon = baseRates?.horizon_weeks ?? 26;
   const enrFor = (t: string): Enrichment | null => enrichments?.tickers?.[t] ?? null;
+  const vtFor = (t: string): ValueTimingEntry | null => valueTiming?.tickers?.[t] ?? null;
 
   const ranked = [...signals].sort((a, b) => {
     const ca = classify(a);
@@ -387,6 +474,7 @@ export default function Dashboard({
                     sig={sig}
                     baseRate={brFor(sig.ticker)}
                     enr={enrFor(sig.ticker)}
+                    vt={vtFor(sig.ticker)}
                     horizon={horizon}
                   />
                 ))}

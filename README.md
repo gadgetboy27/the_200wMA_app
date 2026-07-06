@@ -243,6 +243,15 @@ real-time layer described above.
 - `scripts/weekly_scan.sh` — one command that runs the full S&P scan and wires the
   JSON into the frontend. `scripts/com.wma200.weekly.plist` schedules it every
   Sunday 08:00 via macOS launchd (fires at next wake if the Mac was asleep).
+- `python/gen_value_timing.py` — the **Value Timing** pass over the current
+  signals (free yfinance data, like the other generators): a Piotroski F-score
+  (9 financial-health checks from the two most recent common fiscal years),
+  valuation z-scores (today's P/E / P/S / P/B vs the name's own ~4-year weekly
+  ratio history — split-adjusted, +90-day filing lag, P/B killed on negative
+  book value), and a volatility-scaled **tranche ladder** (rung 1 at the 200WMA,
+  rungs 2–3 at the p50/p10 of the name's last-10y weekly close depths below the
+  line, weighted 25/35/40). Rendered per card as plain-English Health / Value /
+  Buy-plan lines; crypto gets the ladder only (no statements).
 
 **Still to build for the full StockMind integration:** the Yahoo weekly adapter in
 TS (or keep Python as the scanner and have TS just consume its JSON — the current

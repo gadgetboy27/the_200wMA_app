@@ -80,3 +80,46 @@ export interface Enrichments {
   vol_confirm_threshold: number;
   tickers: Record<string, Enrichment | undefined>;
 }
+
+// web/public/value_timing.json — Piotroski F-score + valuation z + tranche ladder.
+export interface FScoreChecks {
+  roa: boolean | null;
+  cfo: boolean | null;
+  d_roa: boolean | null;
+  accruals: boolean | null;
+  d_lev: boolean | null;
+  d_liq: boolean | null;
+  shares: boolean | null;
+  d_margin: boolean | null;
+  d_turn: boolean | null;
+}
+export interface Valuation {
+  pe_z: number | null;
+  ps_z: number | null;
+  pb_z: number | null;
+  composite_z: number;
+  weeks: number;
+}
+export interface LadderRung {
+  price: number;
+  pct_vs_ma: number;
+  weight: number;
+}
+export interface Ladder {
+  rungs: LadderRung[];
+  basis: "p50/p10" | "fallback";
+}
+export interface ValueTimingEntry {
+  f_score: number | null; // Piotroski passes (stocks only; null for crypto)
+  f_max: number | null; // checks that were evaluable (financials lack some)
+  checks: FScoreChecks | null;
+  valuation: Valuation | null; // null when every z-guard tripped
+  ladder: Ladder | null;
+}
+export interface ValueTiming {
+  generated?: string;
+  z_min_weeks: number;
+  depth_years: number;
+  tranche_weights: number[];
+  tickers: Record<string, ValueTimingEntry | undefined>;
+}

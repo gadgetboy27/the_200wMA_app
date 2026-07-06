@@ -1,12 +1,13 @@
 import Nav from "@/components/Nav";
 import Dashboard from "@/components/Dashboard";
-import { loadScan, loadBaseRates, loadEnrichments } from "@/lib/data";
+import { loadScan, loadBaseRates, loadEnrichments, loadValueTiming } from "@/lib/data";
 
 export default async function CryptoPage() {
-  const [scan, baseRates, enrichments] = await Promise.all([
+  const [scan, baseRates, enrichments, valueTiming] = await Promise.all([
     loadScan("crypto").catch(() => null),
     loadBaseRates(),
     loadEnrichments(),
+    loadValueTiming(),
   ]);
   // Crypto mandate: only actual 200WMA crosses (up or down). "NEAR" proximity
   // signals are noise at crypto volatility — a coin can sit near its 200WMA for
@@ -31,6 +32,7 @@ export default async function CryptoPage() {
           baseRates={baseRates}
           breadthHistory={null}
           enrichments={enrichments}
+          valueTiming={valueTiming}
         />
       ) : (
         <p className="empty">
