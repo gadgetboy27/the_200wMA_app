@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-12",
+  "generated": "2026-07-19",
   "z_min_weeks": 40,
   "depth_years": 10,
   "tranche_weights": [
@@ -9,300 +9,6 @@
   ],
   "_note": "F-score = Piotroski 9-check financial health from the two most recent common fiscal years. Valuation z = today's P/E / P/S / P/B vs this name's own ~4y weekly ratio history (split-adjusted, +90d filing lag; residual dividend-adjustment drift accepted). Ladder rungs = the 200WMA and the p50/p10 of this name's last-10y weekly close depths below it. Descriptive, not advice.",
   "tickers": {
-    "TMO": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.43,
-        "ps_z": -0.33,
-        "pb_z": -0.96,
-        "composite_z": -0.43,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 525.68,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 477.8,
-            "pct_vs_ma": -9.1,
-            "weight": 35
-          },
-          {
-            "price": 396.79,
-            "pct_vs_ma": -24.5,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "DVN": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": 1.62,
-        "ps_z": -0.03,
-        "pb_z": -0.8,
-        "composite_z": -0.03,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 41.97,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 31.75,
-            "pct_vs_ma": -24.3,
-            "weight": 35
-          },
-          {
-            "price": 27.28,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "CI": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -0.94,
-        "ps_z": -1.45,
-        "pb_z": -0.34,
-        "composite_z": -0.94,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 290.93,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 277.92,
-            "pct_vs_ma": -4.5,
-            "weight": 35
-          },
-          {
-            "price": 266.29,
-            "pct_vs_ma": -8.5,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "KKR": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": false,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 0.66,
-        "ps_z": -1.04,
-        "pb_z": -1.15,
-        "composite_z": -1.04,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 96.11,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 92.26,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 88.42,
-            "pct_vs_ma": -8.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ULTA": {
-      "f_score": 5,
-      "f_max": 8,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": null,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 0.02,
-        "ps_z": -0.97,
-        "pb_z": -1.29,
-        "composite_z": -0.97,
-        "weeks": 167
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 464.25,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 418.87,
-            "pct_vs_ma": -9.8,
-            "weight": 35
-          },
-          {
-            "price": 365.78,
-            "pct_vs_ma": -21.2,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "TMUS": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -0.94,
-        "ps_z": -0.76,
-        "pb_z": 0.06,
-        "composite_z": -0.76,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 181.22,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 163.1,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 144.98,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
-      }
-    },
-    "AZO": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.55,
-        "ps_z": -1.47,
-        "pb_z": null,
-        "composite_z": -1.01,
-        "weeks": 188
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 3077.32,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 2769.59,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 2461.86,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
-      }
-    },
     "STE": {
       "f_score": 9,
       "f_max": 9,
@@ -318,26 +24,68 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -0.98,
-        "ps_z": -2.56,
-        "pb_z": -2.61,
-        "composite_z": -2.56,
-        "weeks": 158
+        "pe_z": -0.97,
+        "ps_z": -2.41,
+        "pb_z": -2.44,
+        "composite_z": -2.41,
+        "weeks": 159
       },
       "ladder": {
         "rungs": [
           {
-            "price": 216.34,
+            "price": 216.5,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 207.69,
+            "price": 207.84,
             "pct_vs_ma": -4.0,
             "weight": 35
           },
           {
-            "price": 199.04,
+            "price": 199.18,
+            "pct_vs_ma": -8.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "PG": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.72,
+        "ps_z": -0.28,
+        "pb_z": -0.84,
+        "composite_z": -0.72,
+        "weeks": 198
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 148.0,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 142.08,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 136.16,
             "pct_vs_ma": -8.0,
             "weight": 40
           }
@@ -360,21 +108,21 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.56,
-        "ps_z": -1.03,
-        "pb_z": 0.54,
-        "composite_z": -1.03,
-        "weeks": 171
+        "pe_z": -1.46,
+        "ps_z": -0.9,
+        "pb_z": 0.81,
+        "composite_z": -0.9,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 29.67,
+            "price": 29.66,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 27.8,
+            "price": 27.79,
             "pct_vs_ma": -6.3,
             "weight": 35
           },
@@ -387,50 +135,92 @@
         "basis": "p50/p10"
       }
     },
-    "IP": {
-      "f_score": 4,
+    "ICE": {
+      "f_score": 8,
       "f_max": 9,
       "checks": {
-        "roa": false,
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -2.11,
+        "ps_z": -1.29,
+        "pb_z": -1.11,
+        "composite_z": -1.29,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 136.8,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 131.33,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 123.95,
+            "pct_vs_ma": -9.4,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "ARES": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
         "cfo": true,
         "d_roa": false,
         "accruals": true,
         "d_lev": true,
         "d_liq": false,
         "shares": false,
-        "d_margin": true,
-        "d_turn": false
+        "d_margin": false,
+        "d_turn": true
       },
       "valuation": {
-        "pe_z": -0.41,
-        "ps_z": 0.17,
-        "pb_z": -0.78,
-        "composite_z": -0.41,
-        "weeks": 171
+        "pe_z": -0.92,
+        "ps_z": -1.25,
+        "pb_z": -1.36,
+        "composite_z": -1.25,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 38.02,
+            "price": 122.32,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 34.02,
-            "pct_vs_ma": -10.5,
+            "price": 112.36,
+            "pct_vs_ma": -8.1,
             "weight": 35
           },
           {
-            "price": 29.99,
-            "pct_vs_ma": -21.1,
+            "price": 104.07,
+            "pct_vs_ma": -14.9,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "MCD": {
-      "f_score": 6,
+    "OXY": {
+      "f_score": 4,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -439,124 +229,166 @@
         "accruals": true,
         "d_lev": true,
         "d_liq": false,
-        "shares": true,
-        "d_margin": true,
+        "shares": false,
+        "d_margin": false,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.09,
-        "ps_z": -1.59,
-        "pb_z": null,
-        "composite_z": -1.34,
-        "weeks": 171
+        "pe_z": 2.26,
+        "ps_z": 1.76,
+        "pb_z": 0.01,
+        "composite_z": 1.76,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 275.85,
+            "price": 53.34,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 248.26,
-            "pct_vs_ma": -10.0,
+            "price": 40.17,
+            "pct_vs_ma": -24.7,
             "weight": 35
           },
           {
-            "price": 220.68,
-            "pct_vs_ma": -20.0,
+            "price": 34.67,
+            "pct_vs_ma": -35.0,
             "weight": 40
           }
         ],
-        "basis": "fallback"
+        "basis": "p50/p10"
       }
     },
-    "PG": {
-      "f_score": 6,
+    "ADP": {
+      "f_score": 8,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": true,
         "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
+        "d_lev": false,
+        "d_liq": true,
         "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.95,
-        "ps_z": -0.58,
-        "pb_z": -1.09,
-        "composite_z": -0.95,
-        "weeks": 197
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 147.88,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 141.97,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 136.05,
-            "pct_vs_ma": -8.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "SJM": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": false,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
+        "d_margin": true,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -0.31,
-        "ps_z": 0.31,
-        "pb_z": 1.9,
-        "composite_z": 0.31,
-        "weeks": 154
+        "pe_z": -0.91,
+        "ps_z": -0.62,
+        "pb_z": -1.55,
+        "composite_z": -0.91,
+        "weeks": 198
       },
       "ladder": {
         "rungs": [
           {
-            "price": 112.61,
+            "price": 243.65,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 103.22,
-            "pct_vs_ma": -8.3,
+            "price": 213.07,
+            "pct_vs_ma": -12.5,
             "weight": 35
           },
           {
-            "price": 94.95,
-            "pct_vs_ma": -15.7,
+            "price": 199.63,
+            "pct_vs_ma": -18.1,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "PPG": {
-      "f_score": 6,
+    "SYK": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -1.61,
+        "ps_z": -2.01,
+        "pb_z": -1.95,
+        "composite_z": -1.95,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 321.23,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 307.57,
+            "pct_vs_ma": -4.3,
+            "weight": 35
+          },
+          {
+            "price": 293.23,
+            "pct_vs_ma": -8.7,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "NFLX": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": false,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -2.59,
+        "ps_z": -2.23,
+        "pb_z": -2.18,
+        "composite_z": -2.23,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 70.74,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 55.52,
+            "pct_vs_ma": -21.5,
+            "weight": 35
+          },
+          {
+            "price": 45.98,
+            "pct_vs_ma": -35.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "CI": {
+      "f_score": 7,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -567,72 +399,30 @@
         "d_liq": true,
         "shares": true,
         "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.62,
-        "ps_z": -0.44,
-        "pb_z": -1.04,
-        "composite_z": -1.04,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 117.85,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 108.03,
-            "pct_vs_ma": -8.3,
-            "weight": 35
-          },
-          {
-            "price": 98.58,
-            "pct_vs_ma": -16.4,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ISRG": {
-      "f_score": 5,
-      "f_max": 6,
-      "checks": {
-        "roa": null,
-        "cfo": true,
-        "d_roa": null,
-        "accruals": null,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": null,
-        "ps_z": -1.76,
-        "pb_z": -1.69,
-        "composite_z": -1.73,
-        "weeks": 171
+        "pe_z": -1.05,
+        "ps_z": -1.57,
+        "pb_z": -0.79,
+        "composite_z": -1.05,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 410.91,
+            "price": 290.98,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 385.22,
-            "pct_vs_ma": -6.3,
+            "price": 278.16,
+            "pct_vs_ma": -4.4,
             "weight": 35
           },
           {
-            "price": 337.14,
-            "pct_vs_ma": -18.0,
+            "price": 266.52,
+            "pct_vs_ma": -8.4,
             "weight": 40
           }
         ],
@@ -654,11 +444,11 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 2.23,
-        "ps_z": -0.44,
-        "pb_z": -0.37,
-        "composite_z": -0.37,
-        "weeks": 171
+        "pe_z": 2.21,
+        "ps_z": -0.43,
+        "pb_z": -0.31,
+        "composite_z": -0.31,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
@@ -668,7 +458,7 @@
             "weight": 25
           },
           {
-            "price": 79.32,
+            "price": 79.33,
             "pct_vs_ma": -10.0,
             "weight": 35
           },
@@ -697,25 +487,25 @@
       },
       "valuation": {
         "pe_z": 0.5,
-        "ps_z": 0.58,
-        "pb_z": 0.46,
-        "composite_z": 0.5,
-        "weeks": 171
+        "ps_z": 0.64,
+        "pb_z": 0.51,
+        "composite_z": 0.51,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 78.58,
+            "price": 78.51,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 64.75,
-            "pct_vs_ma": -17.6,
+            "price": 64.8,
+            "pct_vs_ma": -17.5,
             "weight": 35
           },
           {
-            "price": 54.26,
+            "price": 54.23,
             "pct_vs_ma": -30.9,
             "weight": 40
           }
@@ -723,8 +513,134 @@
         "basis": "p50/p10"
       }
     },
-    "AMCR": {
+    "PAYX": {
       "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.5,
+        "ps_z": -0.69,
+        "pb_z": -0.98,
+        "composite_z": -0.69,
+        "weeks": 203
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 114.85,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 100.29,
+            "pct_vs_ma": -12.7,
+            "weight": 35
+          },
+          {
+            "price": 89.83,
+            "pct_vs_ma": -21.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "PPG": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -1.59,
+        "ps_z": -0.4,
+        "pb_z": -1.0,
+        "composite_z": -1.0,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 117.9,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 108.19,
+            "pct_vs_ma": -8.2,
+            "weight": 35
+          },
+          {
+            "price": 98.61,
+            "pct_vs_ma": -16.4,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "SJM": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": false,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -0.31,
+        "ps_z": 0.36,
+        "pb_z": 1.91,
+        "composite_z": 0.36,
+        "weeks": 155
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 112.57,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 103.21,
+            "pct_vs_ma": -8.3,
+            "weight": 35
+          },
+          {
+            "price": 94.95,
+            "pct_vs_ma": -15.6,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "AZO": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -733,32 +649,74 @@
         "accruals": true,
         "d_lev": true,
         "d_liq": true,
-        "shares": false,
+        "shares": true,
         "d_margin": false,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 2.07,
-        "ps_z": 2.07,
-        "pb_z": -1.72,
-        "composite_z": 2.07,
-        "weeks": 197
+        "pe_z": -0.63,
+        "ps_z": -1.54,
+        "pb_z": null,
+        "composite_z": -1.08,
+        "weeks": 189
       },
       "ladder": {
         "rungs": [
           {
-            "price": 44.7,
+            "price": 3081.72,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 41.4,
-            "pct_vs_ma": -7.4,
+            "price": 2773.55,
+            "pct_vs_ma": -10.0,
             "weight": 35
           },
           {
-            "price": 38.02,
-            "pct_vs_ma": -15.0,
+            "price": 2465.38,
+            "pct_vs_ma": -20.0,
+            "weight": 40
+          }
+        ],
+        "basis": "fallback"
+      }
+    },
+    "IP": {
+      "f_score": 4,
+      "f_max": 9,
+      "checks": {
+        "roa": false,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": false,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.41,
+        "ps_z": 0.13,
+        "pb_z": -0.81,
+        "composite_z": -0.41,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 38.06,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 34.13,
+            "pct_vs_ma": -10.3,
+            "weight": 35
+          },
+          {
+            "price": 30.05,
+            "pct_vs_ma": -21.0,
             "weight": 40
           }
         ],
@@ -780,26 +738,26 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.66,
-        "ps_z": -1.11,
-        "pb_z": -1.26,
-        "composite_z": -1.26,
-        "weeks": 184
+        "pe_z": -1.63,
+        "ps_z": -0.9,
+        "pb_z": -1.08,
+        "composite_z": -1.08,
+        "weeks": 185
       },
       "ladder": {
         "rungs": [
           {
-            "price": 99.19,
+            "price": 99.15,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 75.92,
+            "price": 75.89,
             "pct_vs_ma": -23.5,
             "weight": 35
           },
           {
-            "price": 65.28,
+            "price": 65.26,
             "pct_vs_ma": -34.2,
             "weight": 40
           }
@@ -807,8 +765,8 @@
         "basis": "p50/p10"
       }
     },
-    "GPC": {
-      "f_score": 6,
+    "AMCR": {
+      "f_score": 5,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -816,79 +774,37 @@
         "d_roa": false,
         "accruals": true,
         "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
+        "d_liq": true,
+        "shares": false,
+        "d_margin": false,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 3.97,
-        "ps_z": -0.6,
-        "pb_z": -0.51,
-        "composite_z": -0.51,
-        "weeks": 171
+        "pe_z": 2.12,
+        "ps_z": 2.19,
+        "pb_z": -1.66,
+        "composite_z": 2.12,
+        "weeks": 198
       },
       "ladder": {
         "rungs": [
           {
-            "price": 130.55,
+            "price": 44.67,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 116.84,
-            "pct_vs_ma": -10.5,
+            "price": 41.38,
+            "pct_vs_ma": -7.4,
             "weight": 35
           },
           {
-            "price": 103.0,
-            "pct_vs_ma": -21.1,
+            "price": 38.0,
+            "pct_vs_ma": -15.0,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
-      }
-    },
-    "LOW": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.6,
-        "ps_z": -0.63,
-        "pb_z": null,
-        "composite_z": -0.61,
-        "weeks": 167
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 221.83,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 199.65,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 177.46,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
       }
     },
     "BIIB": {
@@ -906,22 +822,22 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 1.06,
-        "ps_z": 0.09,
-        "pb_z": -0.51,
-        "composite_z": 0.09,
-        "weeks": 171
+        "pe_z": 1.19,
+        "ps_z": 0.23,
+        "pb_z": -0.43,
+        "composite_z": 0.23,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 209.47,
+            "price": 209.46,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 175.29,
-            "pct_vs_ma": -16.3,
+            "price": 175.47,
+            "pct_vs_ma": -16.2,
             "weight": 35
           },
           {
@@ -933,511 +849,7 @@
         "basis": "p50/p10"
       }
     },
-    "ARES": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": false,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.0,
-        "ps_z": -1.36,
-        "pb_z": -1.44,
-        "composite_z": -1.36,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 122.03,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 112.09,
-            "pct_vs_ma": -8.1,
-            "weight": 35
-          },
-          {
-            "price": 103.82,
-            "pct_vs_ma": -14.9,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ELV": {
-      "f_score": 4,
-      "f_max": 7,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": false,
-        "d_lev": false,
-        "d_liq": null,
-        "shares": true,
-        "d_margin": null,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": 0.05,
-        "ps_z": -0.83,
-        "pb_z": -0.66,
-        "composite_z": -0.66,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 417.9,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 353.0,
-            "pct_vs_ma": -15.5,
-            "weight": 35
-          },
-          {
-            "price": 292.4,
-            "pct_vs_ma": -30.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ADP": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.29,
-        "ps_z": -1.03,
-        "pb_z": -1.73,
-        "composite_z": -1.29,
-        "weeks": 197
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 243.44,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 212.89,
-            "pct_vs_ma": -12.5,
-            "weight": 35
-          },
-          {
-            "price": 199.46,
-            "pct_vs_ma": -18.1,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "OXY": {
-      "f_score": 4,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": false,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 2.15,
-        "ps_z": 1.54,
-        "pb_z": -0.2,
-        "composite_z": 1.54,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 53.36,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 40.17,
-            "pct_vs_ma": -24.7,
-            "weight": 35
-          },
-          {
-            "price": 34.69,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ICE": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -2.26,
-        "ps_z": -1.48,
-        "pb_z": -1.35,
-        "composite_z": -1.48,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 136.56,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 131.1,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 123.74,
-            "pct_vs_ma": -9.4,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ORCL": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": false,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.19,
-        "ps_z": -0.65,
-        "pb_z": -0.91,
-        "composite_z": -0.91,
-        "weeks": 149
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 143.51,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 129.16,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 114.81,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
-      }
-    },
-    "UNH": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": 3.04,
-        "ps_z": -0.78,
-        "pb_z": -0.47,
-        "composite_z": -0.47,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 437.81,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 310.57,
-            "pct_vs_ma": -29.1,
-            "weight": 35
-          },
-          {
-            "price": 284.57,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "KMB": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.24,
-        "ps_z": 0.22,
-        "pb_z": -1.82,
-        "composite_z": -0.24,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 116.1,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 110.15,
-            "pct_vs_ma": -5.1,
-            "weight": 35
-          },
-          {
-            "price": 96.17,
-            "pct_vs_ma": -17.2,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "PNR": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.47,
-        "ps_z": -0.59,
-        "pb_z": -1.76,
-        "composite_z": -1.47,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 78.81,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 73.81,
-            "pct_vs_ma": -6.3,
-            "weight": 35
-          },
-          {
-            "price": 65.92,
-            "pct_vs_ma": -16.4,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "LVS": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.16,
-        "ps_z": -0.9,
-        "pb_z": 2.19,
-        "composite_z": -0.9,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 48.43,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 41.04,
-            "pct_vs_ma": -15.3,
-            "weight": 35
-          },
-          {
-            "price": 33.03,
-            "pct_vs_ma": -31.8,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "FICO": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.15,
-        "ps_z": -0.91,
-        "pb_z": null,
-        "composite_z": -1.03,
-        "weeks": 184
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 1301.43,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 1165.97,
-            "pct_vs_ma": -10.4,
-            "weight": 35
-          },
-          {
-            "price": 1051.14,
-            "pct_vs_ma": -19.2,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "ROL": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -2.67,
-        "ps_z": -2.69,
-        "pb_z": -1.2,
-        "composite_z": -2.67,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 46.51,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 41.86,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 37.21,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
-      }
-    },
-    "ZBRA": {
+    "MDLZ": {
       "f_score": 5,
       "f_max": 9,
       "checks": {
@@ -1452,27 +864,27 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -0.34,
-        "ps_z": -0.58,
-        "pb_z": -0.95,
-        "composite_z": -0.58,
-        "weeks": 171
+        "pe_z": 1.11,
+        "ps_z": -1.14,
+        "pb_z": -0.22,
+        "composite_z": -0.22,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 286.92,
+            "price": 62.05,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 237.87,
-            "pct_vs_ma": -17.1,
+            "price": 58.79,
+            "pct_vs_ma": -5.3,
             "weight": 35
           },
           {
-            "price": 198.99,
-            "pct_vs_ma": -30.6,
+            "price": 54.48,
+            "pct_vs_ma": -12.2,
             "weight": 40
           }
         ],
@@ -1494,11 +906,11 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -0.91,
-        "ps_z": -1.61,
-        "pb_z": -2.12,
-        "composite_z": -1.61,
-        "weeks": 171
+        "pe_z": -0.84,
+        "ps_z": -1.35,
+        "pb_z": -1.6,
+        "composite_z": -1.35,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
@@ -1521,8 +933,8 @@
         "basis": "p50/p10"
       }
     },
-    "MDLZ": {
-      "f_score": 5,
+    "UPS": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -1530,75 +942,327 @@
         "d_roa": false,
         "accruals": true,
         "d_lev": false,
-        "d_liq": false,
+        "d_liq": true,
         "shares": true,
-        "d_margin": false,
-        "d_turn": true
+        "d_margin": true,
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": 0.97,
-        "ps_z": -1.36,
-        "pb_z": -0.64,
-        "composite_z": -0.64,
-        "weeks": 171
+        "pe_z": 2.01,
+        "ps_z": 0.47,
+        "pb_z": 0.88,
+        "composite_z": 0.88,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 62.02,
+            "price": 120.28,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 58.74,
-            "pct_vs_ma": -5.3,
+            "price": 98.44,
+            "pct_vs_ma": -18.2,
             "weight": 35
           },
           {
-            "price": 54.43,
-            "pct_vs_ma": -12.2,
+            "price": 78.18,
+            "pct_vs_ma": -35.0,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "SNPS": {
-      "f_score": 3,
+    "UNH": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": false,
         "accruals": true,
-        "d_lev": false,
+        "d_lev": true,
         "d_liq": false,
-        "shares": false,
+        "shares": true,
         "d_margin": false,
-        "d_turn": false
+        "d_turn": true
       },
       "valuation": {
-        "pe_z": 0.3,
-        "ps_z": -1.0,
-        "pb_z": -2.01,
-        "composite_z": -1.0,
-        "weeks": 180
+        "pe_z": 2.98,
+        "ps_z": -0.76,
+        "pb_z": -0.45,
+        "composite_z": -0.45,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 469.73,
+            "price": 437.51,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 440.09,
-            "pct_vs_ma": -6.3,
+            "price": 311.18,
+            "pct_vs_ma": -28.9,
             "weight": 35
           },
           {
-            "price": 405.74,
-            "pct_vs_ma": -13.6,
+            "price": 284.38,
+            "pct_vs_ma": -35.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "MCD": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -1.24,
+        "ps_z": -1.9,
+        "pb_z": null,
+        "composite_z": -1.57,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 276.02,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 248.42,
+            "pct_vs_ma": -10.0,
+            "weight": 35
+          },
+          {
+            "price": 220.82,
+            "pct_vs_ma": -20.0,
+            "weight": 40
+          }
+        ],
+        "basis": "fallback"
+      }
+    },
+    "ROL": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -2.5,
+        "ps_z": -2.51,
+        "pb_z": -1.1,
+        "composite_z": -2.5,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 46.56,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 41.91,
+            "pct_vs_ma": -10.0,
+            "weight": 35
+          },
+          {
+            "price": 37.25,
+            "pct_vs_ma": -20.0,
+            "weight": 40
+          }
+        ],
+        "basis": "fallback"
+      }
+    },
+    "FICO": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.14,
+        "ps_z": -0.9,
+        "pb_z": null,
+        "composite_z": -1.02,
+        "weeks": 185
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 1305.39,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 1180.6,
+            "pct_vs_ma": -9.6,
+            "weight": 35
+          },
+          {
+            "price": 1056.02,
+            "pct_vs_ma": -19.1,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "MRSH": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.47,
+        "ps_z": -1.78,
+        "pb_z": -1.86,
+        "composite_z": -1.78,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 189.45,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 179.65,
+            "pct_vs_ma": -5.2,
+            "weight": 35
+          },
+          {
+            "price": 164.4,
+            "pct_vs_ma": -13.2,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "GPC": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": 3.76,
+        "ps_z": -0.64,
+        "pb_z": -0.54,
+        "composite_z": -0.54,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 130.48,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 117.24,
+            "pct_vs_ma": -10.2,
+            "weight": 35
+          },
+          {
+            "price": 102.95,
+            "pct_vs_ma": -21.1,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "DG": {
+      "f_score": 8,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": 0.45,
+        "ps_z": 0.01,
+        "pb_z": -0.5,
+        "composite_z": 0.01,
+        "weeks": 168
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 131.65,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 90.84,
+            "pct_vs_ma": -31.0,
+            "weight": 35
+          },
+          {
+            "price": 85.57,
+            "pct_vs_ma": -35.0,
             "weight": 40
           }
         ],
@@ -1621,278 +1285,26 @@
       },
       "valuation": {
         "pe_z": -0.54,
-        "ps_z": 0.52,
+        "ps_z": 0.51,
         "pb_z": -0.9,
         "composite_z": -0.54,
-        "weeks": 171
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 15.59,
+            "price": 15.55,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 12.83,
+            "price": 12.8,
             "pct_vs_ma": -17.7,
             "weight": 35
           },
           {
-            "price": 10.13,
+            "price": 10.11,
             "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "RMD": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.8,
-        "ps_z": -1.35,
-        "pb_z": -1.6,
-        "composite_z": -1.6,
-        "weeks": 197
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 216.18,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 189.93,
-            "pct_vs_ma": -12.1,
-            "weight": 35
-          },
-          {
-            "price": 152.94,
-            "pct_vs_ma": -29.3,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "MRSH": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.61,
-        "ps_z": -1.94,
-        "pb_z": -2.0,
-        "composite_z": -1.94,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 189.27,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 178.64,
-            "pct_vs_ma": -5.6,
-            "weight": 35
-          },
-          {
-            "price": 164.18,
-            "pct_vs_ma": -13.3,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "PAYX": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.02,
-        "ps_z": -1.11,
-        "pb_z": -1.36,
-        "composite_z": -1.11,
-        "weeks": 202
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 114.81,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 100.06,
-            "pct_vs_ma": -12.8,
-            "weight": 35
-          },
-          {
-            "price": 89.78,
-            "pct_vs_ma": -21.8,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "NVR": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": false,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -0.11,
-        "ps_z": -1.2,
-        "pb_z": -1.43,
-        "composite_z": -1.2,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 6935.8,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 6572.17,
-            "pct_vs_ma": -5.2,
-            "weight": 35
-          },
-          {
-            "price": 6103.65,
-            "pct_vs_ma": -12.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "UPS": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 1.69,
-        "ps_z": 0.15,
-        "pb_z": 0.5,
-        "composite_z": 0.5,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 120.42,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 98.56,
-            "pct_vs_ma": -18.2,
-            "weight": 35
-          },
-          {
-            "price": 78.28,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "DECK": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.27,
-        "ps_z": -1.29,
-        "pb_z": -1.27,
-        "composite_z": -1.27,
-        "weeks": 158
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 113.66,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 105.21,
-            "pct_vs_ma": -7.4,
-            "weight": 35
-          },
-          {
-            "price": 92.97,
-            "pct_vs_ma": -18.2,
             "weight": 40
           }
         ],
@@ -1914,26 +1326,26 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 0.33,
-        "ps_z": -0.57,
+        "pe_z": 0.56,
+        "ps_z": -0.45,
         "pb_z": null,
-        "composite_z": -0.12,
-        "weeks": 180
+        "composite_z": 0.06,
+        "weeks": 181
       },
       "ladder": {
         "rungs": [
           {
-            "price": 26.15,
+            "price": 26.16,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 23.0,
-            "pct_vs_ma": -12.1,
+            "price": 23.07,
+            "pct_vs_ma": -11.8,
             "weight": 35
           },
           {
-            "price": 18.48,
+            "price": 18.49,
             "pct_vs_ma": -29.3,
             "weight": 40
           }
@@ -1941,8 +1353,176 @@
         "basis": "p50/p10"
       }
     },
-    "UHS": {
+    "LOW": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.75,
+        "ps_z": -0.73,
+        "pb_z": null,
+        "composite_z": -0.74,
+        "weeks": 168
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 221.98,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 199.78,
+            "pct_vs_ma": -10.0,
+            "weight": 35
+          },
+          {
+            "price": 177.59,
+            "pct_vs_ma": -20.0,
+            "weight": 40
+          }
+        ],
+        "basis": "fallback"
+      }
+    },
+    "VEEV": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": false,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -2.13,
+        "ps_z": -1.79,
+        "pb_z": -1.98,
+        "composite_z": -1.98,
+        "weeks": 168
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 208.1,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 178.37,
+            "pct_vs_ma": -14.3,
+            "weight": 35
+          },
+          {
+            "price": 159.22,
+            "pct_vs_ma": -23.5,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "LVS": {
       "f_score": 8,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.28,
+        "ps_z": -0.92,
+        "pb_z": 2.02,
+        "composite_z": -0.92,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 48.47,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 41.08,
+            "pct_vs_ma": -15.3,
+            "weight": 35
+          },
+          {
+            "price": 33.06,
+            "pct_vs_ma": -31.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "ABT": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": 0.29,
+        "ps_z": -0.92,
+        "pb_z": -1.97,
+        "composite_z": -0.92,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 107.71,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 103.19,
+            "pct_vs_ma": -4.2,
+            "weight": 35
+          },
+          {
+            "price": 89.04,
+            "pct_vs_ma": -17.3,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "DECK": {
+      "f_score": 7,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -1952,31 +1532,73 @@
         "d_lev": true,
         "d_liq": false,
         "shares": true,
-        "d_margin": true,
+        "d_margin": false,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.98,
-        "ps_z": -1.96,
-        "pb_z": -1.84,
-        "composite_z": -1.96,
-        "weeks": 171
+        "pe_z": -1.25,
+        "ps_z": -1.28,
+        "pb_z": -1.26,
+        "composite_z": -1.26,
+        "weeks": 159
       },
       "ladder": {
         "rungs": [
           {
-            "price": 168.21,
+            "price": 113.91,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 152.14,
-            "pct_vs_ma": -9.6,
+            "price": 105.83,
+            "pct_vs_ma": -7.1,
             "weight": 35
           },
           {
-            "price": 127.71,
-            "pct_vs_ma": -24.1,
+            "price": 93.42,
+            "pct_vs_ma": -18.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "NVR": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": false,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -0.1,
+        "ps_z": -1.18,
+        "pb_z": -1.4,
+        "composite_z": -1.18,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 6947.82,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 6562.08,
+            "pct_vs_ma": -5.6,
+            "weight": 35
+          },
+          {
+            "price": 6120.32,
+            "pct_vs_ma": -11.9,
             "weight": 40
           }
         ],
@@ -1998,34 +1620,76 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.89,
-        "ps_z": -1.68,
-        "pb_z": -1.64,
-        "composite_z": -1.68,
-        "weeks": 197
+        "pe_z": -1.81,
+        "ps_z": -1.6,
+        "pb_z": -1.59,
+        "composite_z": -1.6,
+        "weeks": 198
       },
       "ladder": {
         "rungs": [
           {
-            "price": 162.66,
+            "price": 162.5,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 151.56,
-            "pct_vs_ma": -6.8,
+            "price": 151.55,
+            "pct_vs_ma": -6.7,
             "weight": 35
           },
           {
-            "price": 139.85,
-            "pct_vs_ma": -14.0,
+            "price": 140.05,
+            "pct_vs_ma": -13.8,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "HSY": {
+    "KMB": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.4,
+        "ps_z": -0.06,
+        "pb_z": -1.85,
+        "composite_z": -0.4,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 116.12,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 110.16,
+            "pct_vs_ma": -5.1,
+            "weight": 35
+          },
+          {
+            "price": 96.2,
+            "pct_vs_ma": -17.2,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "ZBRA": {
       "f_score": 5,
       "f_max": 9,
       "checks": {
@@ -2034,159 +1698,75 @@
         "d_roa": false,
         "accruals": true,
         "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 2.42,
-        "ps_z": -0.84,
-        "pb_z": -0.83,
-        "composite_z": -0.83,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 188.49,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 176.6,
-            "pct_vs_ma": -6.3,
-            "weight": 35
-          },
-          {
-            "price": 157.54,
-            "pct_vs_ma": -16.4,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "VEEV": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": false,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -2.25,
-        "ps_z": -1.93,
-        "pb_z": -2.09,
-        "composite_z": -2.09,
-        "weeks": 167
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 208.0,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 178.11,
-            "pct_vs_ma": -14.4,
-            "weight": 35
-          },
-          {
-            "price": 159.12,
-            "pct_vs_ma": -23.5,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "AMT": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
         "d_liq": false,
         "shares": true,
         "d_margin": false,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.59,
-        "ps_z": -1.59,
-        "pb_z": 0.14,
-        "composite_z": -1.59,
-        "weeks": 171
+        "pe_z": -0.38,
+        "ps_z": -0.64,
+        "pb_z": -1.01,
+        "composite_z": -0.64,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 184.53,
+            "price": 286.82,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 166.78,
-            "pct_vs_ma": -9.6,
+            "price": 238.16,
+            "pct_vs_ma": -17.0,
             "weight": 35
           },
           {
-            "price": 150.37,
-            "pct_vs_ma": -18.5,
+            "price": 198.96,
+            "pct_vs_ma": -30.6,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "PEP": {
-      "f_score": 5,
+    "BDX": {
+      "f_score": 7,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
-        "d_roa": false,
+        "d_roa": true,
         "accruals": true,
         "d_lev": false,
-        "d_liq": true,
+        "d_liq": false,
         "shares": true,
-        "d_margin": false,
-        "d_turn": false
+        "d_margin": true,
+        "d_turn": true
       },
       "valuation": {
-        "pe_z": 0.0,
-        "ps_z": -1.33,
-        "pb_z": -1.92,
-        "composite_z": -1.33,
-        "weeks": 171
+        "pe_z": -0.64,
+        "ps_z": -1.13,
+        "pb_z": -0.58,
+        "composite_z": -0.64,
+        "weeks": 185
       },
       "ladder": {
         "rungs": [
           {
-            "price": 151.48,
+            "price": 169.75,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 141.63,
-            "pct_vs_ma": -6.5,
+            "price": 159.27,
+            "pct_vs_ma": -6.2,
             "weight": 35
           },
           {
-            "price": 126.29,
-            "pct_vs_ma": -16.6,
+            "price": 133.07,
+            "pct_vs_ma": -21.6,
             "weight": 40
           }
         ],
@@ -2208,34 +1788,34 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 0.83,
-        "ps_z": -1.11,
-        "pb_z": -1.31,
-        "composite_z": -1.11,
-        "weeks": 171
+        "pe_z": 0.97,
+        "ps_z": -0.94,
+        "pb_z": -1.15,
+        "composite_z": -0.94,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 219.84,
+            "price": 219.65,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 193.79,
-            "pct_vs_ma": -11.9,
+            "price": 193.94,
+            "pct_vs_ma": -11.7,
             "weight": 35
           },
           {
-            "price": 175.47,
-            "pct_vs_ma": -20.2,
+            "price": 175.48,
+            "pct_vs_ma": -20.1,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "MTD": {
+    "PFE": {
       "f_score": 6,
       "f_max": 9,
       "checks": {
@@ -2243,122 +1823,248 @@
         "cfo": true,
         "d_roa": false,
         "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.54,
-        "ps_z": -0.67,
-        "pb_z": null,
-        "composite_z": -0.6,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 1295.08,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 1196.02,
-            "pct_vs_ma": -7.6,
-            "weight": 35
-          },
-          {
-            "price": 1085.57,
-            "pct_vs_ma": -16.2,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "AWK": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
+        "d_lev": false,
+        "d_liq": false,
         "shares": true,
         "d_margin": true,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.41,
-        "ps_z": -1.69,
-        "pb_z": -1.11,
-        "composite_z": -1.41,
-        "weeks": 171
+        "pe_z": -0.39,
+        "ps_z": 0.68,
+        "pb_z": 0.45,
+        "composite_z": 0.45,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 130.38,
+            "price": 27.02,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 122.99,
-            "pct_vs_ma": -5.7,
+            "price": 21.11,
+            "pct_vs_ma": -21.9,
             "weight": 35
           },
           {
-            "price": 108.78,
-            "pct_vs_ma": -16.6,
+            "price": 19.23,
+            "pct_vs_ma": -28.8,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "MSFT": {
-      "f_score": 6,
+    "AMT": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.54,
+        "ps_z": -1.49,
+        "pb_z": 0.17,
+        "composite_z": -1.49,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 184.31,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 166.63,
+            "pct_vs_ma": -9.6,
+            "weight": 35
+          },
+          {
+            "price": 150.22,
+            "pct_vs_ma": -18.5,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "RMD": {
+      "f_score": 8,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -1.86,
+        "ps_z": -1.47,
+        "pb_z": -1.67,
+        "composite_z": -1.67,
+        "weeks": 198
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 216.1,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 191.04,
+            "pct_vs_ma": -11.6,
+            "weight": 35
+          },
+          {
+            "price": 153.0,
+            "pct_vs_ma": -29.2,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "HSY": {
+      "f_score": 5,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": false,
         "accruals": true,
-        "d_lev": true,
+        "d_lev": false,
         "d_liq": true,
         "shares": true,
         "d_margin": false,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.09,
-        "ps_z": -1.13,
-        "pb_z": -1.82,
-        "composite_z": -1.13,
-        "weeks": 197
+        "pe_z": 2.3,
+        "ps_z": -0.91,
+        "pb_z": -0.87,
+        "composite_z": -0.87,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 383.22,
+            "price": 188.35,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 344.9,
-            "pct_vs_ma": -10.0,
+            "price": 175.49,
+            "pct_vs_ma": -6.8,
             "weight": 35
           },
           {
-            "price": 306.58,
-            "pct_vs_ma": -20.0,
+            "price": 157.45,
+            "pct_vs_ma": -16.4,
             "weight": 40
           }
         ],
-        "basis": "fallback"
+        "basis": "p50/p10"
+      }
+    },
+    "KHC": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": false,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.44,
+        "ps_z": -0.38,
+        "pb_z": 0.45,
+        "composite_z": -0.38,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 28.46,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 24.0,
+            "pct_vs_ma": -15.7,
+            "weight": 35
+          },
+          {
+            "price": 19.09,
+            "pct_vs_ma": -32.9,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "PEP": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.02,
+        "ps_z": -1.34,
+        "pb_z": -1.91,
+        "composite_z": -1.34,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 151.43,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 141.54,
+            "pct_vs_ma": -6.5,
+            "weight": 35
+          },
+          {
+            "price": 126.31,
+            "pct_vs_ma": -16.6,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
       }
     },
     "MAA": {
@@ -2376,26 +2082,26 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 1.65,
-        "ps_z": -0.23,
-        "pb_z": 0.82,
-        "composite_z": 0.82,
-        "weeks": 171
+        "pe_z": 1.59,
+        "ps_z": -0.3,
+        "pb_z": 0.75,
+        "composite_z": 0.75,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 133.81,
+            "price": 132.24,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 125.09,
+            "price": 123.62,
             "pct_vs_ma": -6.5,
             "weight": 35
           },
           {
-            "price": 115.9,
+            "price": 114.54,
             "pct_vs_ma": -13.4,
             "weight": 40
           }
@@ -2403,7 +2109,7 @@
         "basis": "p50/p10"
       }
     },
-    "IQV": {
+    "WYNN": {
       "f_score": 5,
       "f_max": 9,
       "checks": {
@@ -2418,153 +2124,27 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -0.51,
-        "ps_z": -0.69,
-        "pb_z": -0.68,
-        "composite_z": -0.68,
-        "weeks": 171
+        "pe_z": 1.52,
+        "ps_z": -0.84,
+        "pb_z": null,
+        "composite_z": 0.34,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 203.84,
+            "price": 95.74,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 179.97,
-            "pct_vs_ma": -11.7,
+            "price": 76.18,
+            "pct_vs_ma": -20.4,
             "weight": 35
           },
           {
-            "price": 143.56,
-            "pct_vs_ma": -29.6,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "IR": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": 1.2,
-        "ps_z": -1.22,
-        "pb_z": -0.64,
-        "composite_z": -0.64,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 77.04,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 69.34,
-            "pct_vs_ma": -10.0,
-            "weight": 35
-          },
-          {
-            "price": 61.64,
-            "pct_vs_ma": -20.0,
-            "weight": 40
-          }
-        ],
-        "basis": "fallback"
-      }
-    },
-    "BX": {
-      "f_score": 5,
-      "f_max": 7,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": null,
-        "shares": false,
-        "d_margin": null,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -0.98,
-        "ps_z": -1.18,
-        "pb_z": -0.51,
-        "composite_z": -0.98,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 120.07,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 115.27,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 109.48,
-            "pct_vs_ma": -8.8,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "SYK": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.35,
-        "ps_z": -1.8,
-        "pb_z": -1.72,
-        "composite_z": -1.72,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 320.69,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 306.65,
-            "pct_vs_ma": -4.4,
-            "weight": 35
-          },
-          {
-            "price": 292.06,
-            "pct_vs_ma": -8.9,
+            "price": 62.23,
+            "pct_vs_ma": -35.0,
             "weight": 40
           }
         ],
@@ -2586,27 +2166,237 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 2.04,
-        "ps_z": -0.02,
-        "pb_z": 0.17,
-        "composite_z": 0.17,
-        "weeks": 171
+        "pe_z": 1.93,
+        "ps_z": -0.16,
+        "pb_z": 0.03,
+        "composite_z": 0.03,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 109.15,
+            "price": 108.99,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 89.6,
+            "price": 89.47,
             "pct_vs_ma": -17.9,
             "weight": 35
           },
           {
-            "price": 77.97,
+            "price": 77.85,
             "pct_vs_ma": -28.6,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "MTD": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.46,
+        "ps_z": -0.58,
+        "pb_z": null,
+        "composite_z": -0.52,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 1295.64,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 1196.54,
+            "pct_vs_ma": -7.6,
+            "weight": 35
+          },
+          {
+            "price": 1086.04,
+            "pct_vs_ma": -16.2,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "IQV": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.54,
+        "ps_z": -0.72,
+        "pb_z": -0.72,
+        "composite_z": -0.72,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 203.85,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 179.98,
+            "pct_vs_ma": -11.7,
+            "weight": 35
+          },
+          {
+            "price": 143.56,
+            "pct_vs_ma": -29.6,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "TMO": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.36,
+        "ps_z": -0.25,
+        "pb_z": -0.89,
+        "composite_z": -0.36,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 525.67,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 477.79,
+            "pct_vs_ma": -9.1,
+            "weight": 35
+          },
+          {
+            "price": 396.78,
+            "pct_vs_ma": -24.5,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "KDP": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": false,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.1,
+        "ps_z": -0.97,
+        "pb_z": -0.13,
+        "composite_z": -0.97,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 30.49,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 28.69,
+            "pct_vs_ma": -5.9,
+            "weight": 35
+          },
+          {
+            "price": 25.78,
+            "pct_vs_ma": -15.5,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "A": {
+      "f_score": 5,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.23,
+        "ps_z": -0.23,
+        "pb_z": -1.08,
+        "composite_z": -0.23,
+        "weeks": 181
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 129.0,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 117.95,
+            "pct_vs_ma": -8.6,
+            "weight": 35
+          },
+          {
+            "price": 108.13,
+            "pct_vs_ma": -16.2,
             "weight": 40
           }
         ],
@@ -2628,194 +2418,26 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -0.43,
-        "ps_z": -0.82,
+        "pe_z": -0.44,
+        "ps_z": -0.84,
         "pb_z": -0.91,
-        "composite_z": -0.82,
-        "weeks": 171
+        "composite_z": -0.84,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 19.05,
+            "price": 19.07,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 13.14,
+            "price": 13.16,
             "pct_vs_ma": -31.0,
             "weight": 35
           },
           {
-            "price": 12.38,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "XYL": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.51,
-        "ps_z": -0.98,
-        "pb_z": -0.95,
-        "composite_z": -0.98,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 117.62,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 112.49,
-            "pct_vs_ma": -4.4,
-            "weight": 35
-          },
-          {
-            "price": 106.63,
-            "pct_vs_ma": -9.3,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "AJG": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": false,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -0.58,
-        "ps_z": -1.24,
-        "pb_z": -1.47,
-        "composite_z": -1.24,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 245.47,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 216.27,
-            "pct_vs_ma": -11.9,
-            "weight": 35
-          },
-          {
-            "price": 201.62,
-            "pct_vs_ma": -17.9,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "CHD": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.1,
-        "ps_z": -1.11,
-        "pb_z": -0.51,
-        "composite_z": -1.1,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 93.15,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 87.23,
-            "pct_vs_ma": -6.4,
-            "weight": 35
-          },
-          {
-            "price": 83.51,
-            "pct_vs_ma": -10.4,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "PCG": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.97,
-        "ps_z": 0.04,
-        "pb_z": -1.0,
-        "composite_z": -0.97,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 16.59,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 11.45,
-            "pct_vs_ma": -31.0,
-            "weight": 35
-          },
-          {
-            "price": 10.79,
+            "price": 12.4,
             "pct_vs_ma": -35.0,
             "weight": 40
           }
@@ -2838,26 +2460,26 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 0.64,
-        "ps_z": -0.44,
+        "pe_z": 0.54,
+        "ps_z": -0.55,
         "pb_z": -1.31,
-        "composite_z": -0.44,
-        "weeks": 167
+        "composite_z": -0.55,
+        "weeks": 168
       },
       "ladder": {
         "rungs": [
           {
-            "price": 331.39,
+            "price": 331.83,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 318.14,
+            "price": 318.56,
             "pct_vs_ma": -4.0,
             "weight": 35
           },
           {
-            "price": 304.88,
+            "price": 305.29,
             "pct_vs_ma": -8.0,
             "weight": 40
           }
@@ -2865,92 +2487,50 @@
         "basis": "p50/p10"
       }
     },
-    "KDP": {
-      "f_score": 7,
+    "MSFT": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
-        "d_roa": true,
-        "accruals": false,
+        "d_roa": false,
+        "accruals": true,
         "d_lev": true,
         "d_liq": true,
         "shares": true,
         "d_margin": false,
-        "d_turn": true
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.0,
-        "ps_z": -0.76,
-        "pb_z": 0.2,
-        "composite_z": -0.76,
-        "weeks": 171
+        "pe_z": -0.98,
+        "ps_z": -1.01,
+        "pb_z": -1.71,
+        "composite_z": -1.01,
+        "weeks": 198
       },
       "ladder": {
         "rungs": [
           {
-            "price": 30.5,
+            "price": 384.01,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 28.7,
-            "pct_vs_ma": -5.9,
+            "price": 345.61,
+            "pct_vs_ma": -10.0,
             "weight": 35
           },
           {
-            "price": 25.79,
-            "pct_vs_ma": -15.5,
+            "price": 307.21,
+            "pct_vs_ma": -20.0,
             "weight": 40
           }
         ],
-        "basis": "p50/p10"
+        "basis": "fallback"
       }
     },
-    "NFLX": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": false,
-        "d_lev": true,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -2.64,
-        "ps_z": -2.25,
-        "pb_z": -2.2,
-        "composite_z": -2.25,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 70.52,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 55.21,
-            "pct_vs_ma": -21.7,
-            "weight": 35
-          },
-          {
-            "price": 45.84,
-            "pct_vs_ma": -35.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "A": {
-      "f_score": 5,
+    "ULTA": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -2960,31 +2540,73 @@
         "d_lev": true,
         "d_liq": false,
         "shares": true,
-        "d_margin": false,
+        "d_margin": true,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -0.04,
-        "ps_z": -0.03,
-        "pb_z": -0.94,
-        "composite_z": -0.04,
-        "weeks": 180
+        "pe_z": 0.13,
+        "ps_z": -0.86,
+        "pb_z": -1.2,
+        "composite_z": -0.86,
+        "weeks": 168
       },
       "ladder": {
         "rungs": [
           {
-            "price": 128.97,
+            "price": 464.55,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 117.92,
-            "pct_vs_ma": -8.6,
+            "price": 419.35,
+            "pct_vs_ma": -9.7,
             "weight": 35
           },
           {
-            "price": 108.11,
-            "pct_vs_ma": -16.2,
+            "price": 365.3,
+            "pct_vs_ma": -21.4,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "AJG": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": false,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -0.57,
+        "ps_z": -1.21,
+        "pb_z": -1.45,
+        "composite_z": -1.21,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 245.87,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 216.63,
+            "pct_vs_ma": -11.9,
+            "weight": 35
+          },
+          {
+            "price": 201.95,
+            "pct_vs_ma": -17.9,
             "weight": 40
           }
         ],
@@ -3006,26 +2628,26 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.49,
-        "ps_z": -0.5,
-        "pb_z": 0.34,
-        "composite_z": -0.5,
-        "weeks": 154
+        "pe_z": -1.54,
+        "ps_z": -0.61,
+        "pb_z": 0.27,
+        "composite_z": -0.61,
+        "weeks": 155
       },
       "ladder": {
         "rungs": [
           {
-            "price": 80.5,
+            "price": 80.52,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 71.33,
+            "price": 71.35,
             "pct_vs_ma": -11.4,
             "weight": 35
           },
           {
-            "price": 64.35,
+            "price": 64.37,
             "pct_vs_ma": -20.1,
             "weight": 40
           }
@@ -3033,8 +2655,8 @@
         "basis": "p50/p10"
       }
     },
-    "WYNN": {
-      "f_score": 5,
+    "AWK": {
+      "f_score": 8,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -3042,41 +2664,41 @@
         "d_roa": false,
         "accruals": true,
         "d_lev": true,
-        "d_liq": false,
+        "d_liq": true,
         "shares": true,
-        "d_margin": false,
-        "d_turn": false
+        "d_margin": true,
+        "d_turn": true
       },
       "valuation": {
-        "pe_z": 1.69,
-        "ps_z": -0.78,
-        "pb_z": null,
-        "composite_z": 0.45,
-        "weeks": 171
+        "pe_z": -1.06,
+        "ps_z": -1.33,
+        "pb_z": -0.82,
+        "composite_z": -1.06,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 95.57,
+            "price": 130.37,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 76.03,
-            "pct_vs_ma": -20.4,
+            "price": 122.99,
+            "pct_vs_ma": -5.7,
             "weight": 35
           },
           {
-            "price": 62.12,
-            "pct_vs_ma": -35.0,
+            "price": 108.78,
+            "pct_vs_ma": -16.6,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "SPGI": {
-      "f_score": 7,
+    "PCG": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -3087,29 +2709,155 @@
         "d_liq": false,
         "shares": true,
         "d_margin": true,
-        "d_turn": true
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.36,
-        "ps_z": -1.71,
-        "pb_z": 0.36,
-        "composite_z": -1.36,
-        "weeks": 171
+        "pe_z": -0.91,
+        "ps_z": 0.15,
+        "pb_z": -0.95,
+        "composite_z": -0.91,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 410.83,
+            "price": 16.62,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 394.39,
+            "price": 11.46,
+            "pct_vs_ma": -31.0,
+            "weight": 35
+          },
+          {
+            "price": 10.8,
+            "pct_vs_ma": -35.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "XYL": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -1.46,
+        "ps_z": -0.88,
+        "pb_z": -0.91,
+        "composite_z": -0.91,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 117.79,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 112.55,
+            "pct_vs_ma": -4.5,
+            "weight": 35
+          },
+          {
+            "price": 106.66,
+            "pct_vs_ma": -9.4,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "DVN": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": 1.79,
+        "ps_z": 0.25,
+        "pb_z": -0.65,
+        "composite_z": 0.25,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 41.9,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 31.82,
+            "pct_vs_ma": -24.1,
+            "weight": 35
+          },
+          {
+            "price": 27.24,
+            "pct_vs_ma": -35.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "KKR": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": false,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": 0.93,
+        "ps_z": -0.97,
+        "pb_z": -1.04,
+        "composite_z": -0.97,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 96.38,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 92.52,
             "pct_vs_ma": -4.0,
             "weight": 35
           },
           {
-            "price": 377.96,
+            "price": 88.67,
             "pct_vs_ma": -8.0,
             "weight": 40
           }
@@ -3133,25 +2881,25 @@
       },
       "valuation": {
         "pe_z": -1.07,
-        "ps_z": 2.62,
-        "pb_z": -2.11,
+        "ps_z": 2.54,
+        "pb_z": -2.08,
         "composite_z": -1.07,
-        "weeks": 171
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 77.82,
+            "price": 77.94,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 72.92,
-            "pct_vs_ma": -6.3,
+            "price": 73.11,
+            "pct_vs_ma": -6.2,
             "weight": 35
           },
           {
-            "price": 58.75,
+            "price": 58.83,
             "pct_vs_ma": -24.5,
             "weight": 40
           }
@@ -3159,55 +2907,139 @@
         "basis": "p50/p10"
       }
     },
-    "TECH": {
-      "f_score": 5,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": 0.9,
-        "ps_z": -0.56,
-        "pb_z": -0.53,
-        "composite_z": -0.53,
-        "weeks": 197
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 67.58,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 56.05,
-            "pct_vs_ma": -17.1,
-            "weight": 35
-          },
-          {
-            "price": 45.48,
-            "pct_vs_ma": -32.7,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "EXR": {
+    "CHD": {
       "f_score": 7,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.03,
+        "ps_z": -0.9,
+        "pb_z": -0.35,
+        "composite_z": -0.9,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 93.28,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 87.35,
+            "pct_vs_ma": -6.4,
+            "weight": 35
+          },
+          {
+            "price": 83.62,
+            "pct_vs_ma": -10.4,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "NOC": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.54,
+        "ps_z": -0.57,
+        "pb_z": -0.63,
+        "composite_z": -0.57,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 494.73,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 474.94,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 455.15,
+            "pct_vs_ma": -8.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "BX": {
+      "f_score": 5,
+      "f_max": 7,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": null,
+        "shares": false,
+        "d_margin": null,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -0.92,
+        "ps_z": -1.09,
+        "pb_z": -0.4,
+        "composite_z": -0.92,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 120.3,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 115.49,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 109.69,
+            "pct_vs_ma": -8.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "TMUS": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
         "accruals": true,
         "d_lev": false,
         "d_liq": true,
@@ -3216,31 +3048,31 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 0.09,
-        "ps_z": -0.45,
-        "pb_z": -0.54,
-        "composite_z": -0.45,
-        "weeks": 171
+        "pe_z": -0.91,
+        "ps_z": -0.65,
+        "pb_z": 0.17,
+        "composite_z": -0.65,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 135.94,
+            "price": 181.52,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 128.87,
-            "pct_vs_ma": -5.2,
+            "price": 163.36,
+            "pct_vs_ma": -10.0,
             "weight": 35
           },
           {
-            "price": 121.31,
-            "pct_vs_ma": -10.8,
+            "price": 145.21,
+            "pct_vs_ma": -20.0,
             "weight": 40
           }
         ],
-        "basis": "p50/p10"
+        "basis": "fallback"
       }
     },
     "TSN": {
@@ -3258,26 +3090,26 @@
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 1.42,
-        "ps_z": 0.41,
-        "pb_z": 0.74,
-        "composite_z": 0.74,
-        "weeks": 184
+        "pe_z": 1.4,
+        "ps_z": 0.39,
+        "pb_z": 0.73,
+        "composite_z": 0.73,
+        "weeks": 185
       },
       "ladder": {
         "rungs": [
           {
-            "price": 54.45,
+            "price": 54.43,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 48.95,
+            "price": 48.93,
             "pct_vs_ma": -10.1,
             "weight": 35
           },
           {
-            "price": 41.4,
+            "price": 41.37,
             "pct_vs_ma": -24.0,
             "weight": 40
           }
@@ -3285,41 +3117,41 @@
         "basis": "p50/p10"
       }
     },
-    "J": {
-      "f_score": 7,
+    "IR": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": false,
         "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
+        "d_lev": true,
+        "d_liq": false,
         "shares": true,
-        "d_margin": true,
+        "d_margin": false,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 2.16,
-        "ps_z": -1.81,
-        "pb_z": 0.8,
-        "composite_z": 0.8,
-        "weeks": 184
+        "pe_z": 1.54,
+        "ps_z": -0.96,
+        "pb_z": -0.35,
+        "composite_z": -0.35,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 118.01,
+            "price": 77.22,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 106.21,
+            "price": 69.5,
             "pct_vs_ma": -10.0,
             "weight": 35
           },
           {
-            "price": 94.41,
+            "price": 61.78,
             "pct_vs_ma": -20.0,
             "weight": 40
           }
@@ -3327,210 +3159,42 @@
         "basis": "fallback"
       }
     },
-    "ALLE": {
-      "f_score": 6,
+    "TECH": {
+      "f_score": 5,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": false,
         "accruals": true,
-        "d_lev": true,
+        "d_lev": false,
         "d_liq": false,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.39,
-        "ps_z": -0.77,
-        "pb_z": -2.25,
-        "composite_z": -1.39,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 127.8,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 120.79,
-            "pct_vs_ma": -5.5,
-            "weight": 35
-          },
-          {
-            "price": 110.42,
-            "pct_vs_ma": -13.6,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "COP": {
-      "f_score": 7,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": true,
         "shares": true,
         "d_margin": false,
         "d_turn": true
       },
       "valuation": {
-        "pe_z": 1.7,
-        "ps_z": 0.69,
-        "pb_z": -0.63,
-        "composite_z": 0.69,
-        "weeks": 171
+        "pe_z": 0.92,
+        "ps_z": -0.56,
+        "pb_z": -0.52,
+        "composite_z": -0.52,
+        "weeks": 198
       },
       "ladder": {
         "rungs": [
           {
-            "price": 101.7,
+            "price": 67.56,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 89.54,
-            "pct_vs_ma": -12.0,
+            "price": 56.03,
+            "pct_vs_ma": -17.1,
             "weight": 35
           },
           {
-            "price": 69.38,
-            "pct_vs_ma": -31.8,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "EG": {
-      "f_score": 6,
-      "f_max": 7,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": true,
-        "d_liq": null,
-        "shares": true,
-        "d_margin": null,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -0.48,
-        "ps_z": -0.86,
-        "pb_z": -1.0,
-        "composite_z": -0.86,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 342.52,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 325.95,
-            "pct_vs_ma": -4.8,
-            "weight": 35
-          },
-          {
-            "price": 306.24,
-            "pct_vs_ma": -10.6,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "WTW": {
-      "f_score": 6,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": -1.71,
-        "ps_z": -0.4,
-        "pb_z": null,
-        "composite_z": -1.05,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 267.43,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 256.74,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 246.04,
-            "pct_vs_ma": -8.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "AVB": {
-      "f_score": 4,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": false,
-        "accruals": true,
-        "d_lev": false,
-        "d_liq": false,
-        "shares": true,
-        "d_margin": false,
-        "d_turn": false
-      },
-      "valuation": {
-        "pe_z": 0.18,
-        "ps_z": -0.43,
-        "pb_z": 0.59,
-        "composite_z": 0.18,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 176.97,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 167.11,
-            "pct_vs_ma": -5.6,
-            "weight": 35
-          },
-          {
-            "price": 154.36,
-            "pct_vs_ma": -12.8,
+            "price": 45.47,
+            "pct_vs_ma": -32.7,
             "weight": 40
           }
         ],
@@ -3552,26 +3216,26 @@
         "d_turn": false
       },
       "valuation": {
-        "pe_z": 1.18,
-        "ps_z": 0.15,
-        "pb_z": -0.58,
-        "composite_z": 0.15,
-        "weeks": 171
+        "pe_z": 1.1,
+        "ps_z": 0.08,
+        "pb_z": -0.64,
+        "composite_z": 0.08,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 43.95,
+            "price": 44.01,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 35.2,
+            "price": 35.26,
             "pct_vs_ma": -19.9,
             "weight": 35
           },
           {
-            "price": 28.57,
+            "price": 28.61,
             "pct_vs_ma": -35.0,
             "weight": 40
           }
@@ -3579,84 +3243,42 @@
         "basis": "p50/p10"
       }
     },
-    "AON": {
-      "f_score": 8,
+    "ALLE": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
-        "d_roa": true,
-        "accruals": false,
-        "d_lev": true,
-        "d_liq": true,
-        "shares": true,
-        "d_margin": true,
-        "d_turn": true
-      },
-      "valuation": {
-        "pe_z": -1.68,
-        "ps_z": -1.04,
-        "pb_z": null,
-        "composite_z": -1.36,
-        "weeks": 171
-      },
-      "ladder": {
-        "rungs": [
-          {
-            "price": 328.39,
-            "pct_vs_ma": 0.0,
-            "weight": 25
-          },
-          {
-            "price": 315.25,
-            "pct_vs_ma": -4.0,
-            "weight": 35
-          },
-          {
-            "price": 302.12,
-            "pct_vs_ma": -8.0,
-            "weight": 40
-          }
-        ],
-        "basis": "p50/p10"
-      }
-    },
-    "UDR": {
-      "f_score": 8,
-      "f_max": 9,
-      "checks": {
-        "roa": true,
-        "cfo": true,
-        "d_roa": true,
+        "d_roa": false,
         "accruals": true,
         "d_lev": true,
         "d_liq": false,
         "shares": true,
         "d_margin": true,
-        "d_turn": true
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.15,
-        "ps_z": 0.2,
-        "pb_z": 1.8,
-        "composite_z": 0.2,
-        "weeks": 171
+        "pe_z": -1.34,
+        "ps_z": -0.73,
+        "pb_z": -2.19,
+        "composite_z": -1.34,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 36.52,
+            "price": 128.06,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 34.08,
-            "pct_vs_ma": -6.7,
+            "price": 121.03,
+            "pct_vs_ma": -5.5,
             "weight": 35
           },
           {
-            "price": 31.84,
-            "pct_vs_ma": -12.8,
+            "price": 110.64,
+            "pct_vs_ma": -13.6,
             "weight": 40
           }
         ],
@@ -3679,25 +3301,25 @@
       },
       "valuation": {
         "pe_z": -1.07,
-        "ps_z": -0.51,
-        "pb_z": 1.02,
-        "composite_z": -0.51,
-        "weeks": 171
+        "ps_z": -0.54,
+        "pb_z": 0.96,
+        "composite_z": -0.54,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 61.9,
+            "price": 61.81,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 50.98,
+            "price": 50.91,
             "pct_vs_ma": -17.6,
             "weight": 35
           },
           {
-            "price": 40.23,
+            "price": 40.18,
             "pct_vs_ma": -35.0,
             "weight": 40
           }
@@ -3705,49 +3327,133 @@
         "basis": "p50/p10"
       }
     },
-    "T": {
-      "f_score": 6,
+    "KR": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": 3.11,
+        "ps_z": -0.46,
+        "pb_z": 1.71,
+        "composite_z": 1.71,
+        "weeks": 168
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 54.43,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 48.98,
+            "pct_vs_ma": -10.0,
+            "weight": 35
+          },
+          {
+            "price": 43.54,
+            "pct_vs_ma": -20.0,
+            "weight": 40
+          }
+        ],
+        "basis": "fallback"
+      }
+    },
+    "HII": {
+      "f_score": 9,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": true,
         "accruals": true,
-        "d_lev": false,
+        "d_lev": true,
         "d_liq": true,
         "shares": true,
-        "d_margin": false,
-        "d_turn": false
+        "d_margin": true,
+        "d_turn": true
       },
       "valuation": {
-        "pe_z": -1.45,
-        "ps_z": 0.02,
-        "pb_z": -0.15,
-        "composite_z": -0.15,
-        "weeks": 171
+        "pe_z": 0.1,
+        "ps_z": -0.2,
+        "pb_z": -0.71,
+        "composite_z": -0.2,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 19.42,
+            "price": 248.62,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 18.16,
-            "pct_vs_ma": -6.5,
+            "price": 217.81,
+            "pct_vs_ma": -12.4,
             "weight": 35
           },
           {
-            "price": 15.93,
-            "pct_vs_ma": -18.0,
+            "price": 183.22,
+            "pct_vs_ma": -26.3,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "NOC": {
+    "BA": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": false,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": false,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": null,
+        "ps_z": -0.01,
+        "pb_z": null,
+        "composite_z": -0.01,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 197.7,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 155.81,
+            "pct_vs_ma": -21.2,
+            "weight": 35
+          },
+          {
+            "price": 128.51,
+            "pct_vs_ma": -35.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "EW": {
       "f_score": 6,
       "f_max": 9,
       "checks": {
@@ -3756,32 +3462,158 @@
         "d_roa": false,
         "accruals": true,
         "d_lev": true,
-        "d_liq": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": 1.66,
+        "ps_z": -0.84,
+        "pb_z": -0.96,
+        "composite_z": -0.84,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 78.89,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 68.41,
+            "pct_vs_ma": -13.3,
+            "weight": 35
+          },
+          {
+            "price": 59.6,
+            "pct_vs_ma": -24.5,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "AVB": {
+      "f_score": 4,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
         "shares": true,
         "d_margin": false,
         "d_turn": false
       },
       "valuation": {
-        "pe_z": -0.47,
-        "ps_z": -0.28,
-        "pb_z": -0.4,
-        "composite_z": -0.4,
-        "weeks": 171
+        "pe_z": 0.2,
+        "ps_z": -0.4,
+        "pb_z": 0.62,
+        "composite_z": 0.2,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 494.41,
+            "price": 177.06,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 474.63,
+            "price": 167.25,
+            "pct_vs_ma": -5.5,
+            "weight": 35
+          },
+          {
+            "price": 154.43,
+            "pct_vs_ma": -12.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "EXR": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": false,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": 0.2,
+        "ps_z": -0.29,
+        "pb_z": -0.49,
+        "composite_z": -0.29,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 135.9,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 128.83,
+            "pct_vs_ma": -5.2,
+            "weight": 35
+          },
+          {
+            "price": 121.27,
+            "pct_vs_ma": -10.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "SHW": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": true,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": -0.54,
+        "ps_z": -0.1,
+        "pb_z": -1.57,
+        "composite_z": -0.54,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 303.75,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 291.6,
             "pct_vs_ma": -4.0,
             "weight": 35
           },
           {
-            "price": 454.85,
+            "price": 279.45,
             "pct_vs_ma": -8.0,
             "weight": 40
           }
@@ -3789,50 +3621,92 @@
         "basis": "p50/p10"
       }
     },
-    "DLTR": {
-      "f_score": 8,
+    "IBM": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
         "cfo": true,
         "d_roa": true,
         "accruals": true,
-        "d_lev": false,
-        "d_liq": true,
-        "shares": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": false,
         "d_margin": true,
-        "d_turn": true
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": 0.7,
-        "ps_z": -0.34,
-        "pb_z": 1.65,
-        "composite_z": 0.7,
-        "weeks": 167
+        "pe_z": -1.13,
+        "ps_z": -0.12,
+        "pb_z": -0.92,
+        "composite_z": -0.92,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 114.28,
+            "price": 194.89,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 95.09,
-            "pct_vs_ma": -16.8,
+            "price": 184.26,
+            "pct_vs_ma": -5.5,
             "weight": 35
           },
           {
-            "price": 74.28,
-            "pct_vs_ma": -35.0,
+            "price": 174.05,
+            "pct_vs_ma": -10.7,
             "weight": 40
           }
         ],
         "basis": "p50/p10"
       }
     },
-    "CTAS": {
+    "UDR": {
       "f_score": 8,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.14,
+        "ps_z": 0.26,
+        "pb_z": 1.82,
+        "composite_z": 0.26,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 36.4,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 33.97,
+            "pct_vs_ma": -6.7,
+            "weight": 35
+          },
+          {
+            "price": 31.74,
+            "pct_vs_ma": -12.8,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "WTW": {
+      "f_score": 6,
       "f_max": 9,
       "checks": {
         "roa": true,
@@ -3842,30 +3716,114 @@
         "d_lev": false,
         "d_liq": true,
         "shares": true,
-        "d_margin": true,
-        "d_turn": true
+        "d_margin": false,
+        "d_turn": false
       },
       "valuation": {
-        "pe_z": -1.68,
-        "ps_z": -1.65,
-        "pb_z": -1.69,
-        "composite_z": -1.68,
-        "weeks": 202
+        "pe_z": -1.63,
+        "ps_z": -0.29,
+        "pb_z": null,
+        "composite_z": -0.96,
+        "weeks": 172
       },
       "ladder": {
         "rungs": [
           {
-            "price": 163.76,
+            "price": 267.92,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 147.39,
+            "price": 257.21,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 246.49,
+            "pct_vs_ma": -8.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "SPGI": {
+      "f_score": 7,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": true,
+        "accruals": true,
+        "d_lev": false,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": true
+      },
+      "valuation": {
+        "pe_z": -1.21,
+        "ps_z": -1.39,
+        "pb_z": 0.73,
+        "composite_z": -1.21,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 411.5,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 395.04,
+            "pct_vs_ma": -4.0,
+            "weight": 35
+          },
+          {
+            "price": 378.58,
+            "pct_vs_ma": -8.0,
+            "weight": 40
+          }
+        ],
+        "basis": "p50/p10"
+      }
+    },
+    "LMT": {
+      "f_score": 6,
+      "f_max": 9,
+      "checks": {
+        "roa": true,
+        "cfo": true,
+        "d_roa": false,
+        "accruals": true,
+        "d_lev": true,
+        "d_liq": false,
+        "shares": true,
+        "d_margin": true,
+        "d_turn": false
+      },
+      "valuation": {
+        "pe_z": 1.16,
+        "ps_z": -0.51,
+        "pb_z": 0.46,
+        "composite_z": 0.46,
+        "weeks": 172
+      },
+      "ladder": {
+        "rungs": [
+          {
+            "price": 462.62,
+            "pct_vs_ma": 0.0,
+            "weight": 25
+          },
+          {
+            "price": 416.35,
             "pct_vs_ma": -10.0,
             "weight": 35
           },
           {
-            "price": 131.01,
+            "price": 370.09,
             "pct_vs_ma": -20.0,
             "weight": 40
           }
@@ -3886,7 +3844,7 @@
             "weight": 25
           },
           {
-            "price": 1.05,
+            "price": 1.06,
             "pct_vs_ma": -12.8,
             "weight": 35
           },
@@ -3933,17 +3891,17 @@
       "ladder": {
         "rungs": [
           {
-            "price": 62869.18,
+            "price": 63093.58,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 55962.62,
+            "price": 56162.38,
             "pct_vs_ma": -11.0,
             "weight": 35
           },
           {
-            "price": 43431.21,
+            "price": 43586.23,
             "pct_vs_ma": -30.9,
             "weight": 40
           }
@@ -3959,17 +3917,17 @@
       "ladder": {
         "rungs": [
           {
-            "price": 528.61,
+            "price": 530.11,
             "pct_vs_ma": 0.0,
             "weight": 25
           },
           {
-            "price": 478.19,
+            "price": 479.55,
             "pct_vs_ma": -9.5,
             "weight": 35
           },
           {
-            "price": 455.44,
+            "price": 456.73,
             "pct_vs_ma": -13.8,
             "weight": 40
           }
