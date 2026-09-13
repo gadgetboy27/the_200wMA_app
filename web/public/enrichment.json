@@ -5,26 +5,35 @@
   "_note": "Volume = latest weekly volume / 50-week median. Spring = weekly low below the 200WMA with a close back above it, within lookback.",
   "tickers": {
     "ABT": {
-      "vol_ratio": 1.02,
+      "vol_ratio": 0.96,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 3,
+        "weeks_ago": 4,
         "depth_pct": -0.59
       }
     },
-    "ADSK": {
-      "vol_ratio": 1.59,
-      "vol_confirms": true,
+    "ADP": {
+      "vol_ratio": 0.7,
+      "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 1,
-        "depth_pct": -1.11
+        "weeks_ago": 7,
+        "depth_pct": -1.41
       }
     },
     "AES": {
-      "vol_ratio": 1.0,
+      "vol_ratio": 0.86,
       "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "AIG": {
+      "vol_ratio": 1.51,
+      "vol_confirms": true,
       "spring": {
         "happened": false,
         "weeks_ago": null,
@@ -32,285 +41,24 @@
       }
     },
     "AJG": {
-      "vol_ratio": 1.03,
+      "vol_ratio": 0.66,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
+        "weeks_ago": 3,
         "depth_pct": -0.46
       }
     },
-    "AKAM": {
-      "vol_ratio": 0.81,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "ALB": {
-      "vol_ratio": 1.22,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 1,
-        "depth_pct": -3.8
-      }
-    },
     "AMCR": {
-      "vol_ratio": 0.94,
+      "vol_ratio": 0.8,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 5,
-        "depth_pct": -0.56
+        "weeks_ago": 7,
+        "depth_pct": -3.74
       }
     },
     "AMT": {
-      "vol_ratio": 0.92,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "AON": {
-      "vol_ratio": 1.81,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 9,
-        "depth_pct": -1.76
-      }
-    },
-    "AVY": {
-      "vol_ratio": 3.42,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -3.07
-      }
-    },
-    "AWK": {
-      "vol_ratio": 1.28,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -0.63
-      }
-    },
-    "AZO": {
-      "vol_ratio": 2.46,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -4.84
-      }
-    },
-    "BA": {
-      "vol_ratio": 1.0,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "BDX": {
-      "vol_ratio": 0.84,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -1.74
-      }
-    },
-    "BIIB": {
-      "vol_ratio": 0.7,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -0.37
-      }
-    },
-    "BR": {
-      "vol_ratio": 1.22,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CARR": {
-      "vol_ratio": 0.92,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 0,
-        "depth_pct": -3.2
-      }
-    },
-    "CDNS": {
-      "vol_ratio": 1.64,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CHD": {
-      "vol_ratio": 1.03,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CI": {
-      "vol_ratio": 1.02,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 8,
-        "depth_pct": -5.2
-      }
-    },
-    "CL": {
-      "vol_ratio": 0.99,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CMS": {
-      "vol_ratio": 1.35,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CNC": {
-      "vol_ratio": 0.93,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -0.63
-      }
-    },
-    "COIN": {
-      "vol_ratio": 1.18,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 0,
-        "depth_pct": -6.52
-      }
-    },
-    "CPT": {
-      "vol_ratio": 1.02,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "CTSH": {
-      "vol_ratio": 1.0,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "DG": {
-      "vol_ratio": 1.09,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 0,
-        "depth_pct": -4.19
-      }
-    },
-    "DHI": {
-      "vol_ratio": 0.92,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "DHR": {
-      "vol_ratio": 0.91,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "DIS": {
-      "vol_ratio": 0.93,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -2.03
-      }
-    },
-    "DXCM": {
-      "vol_ratio": 0.52,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "EG": {
-      "vol_ratio": 1.18,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 10,
-        "depth_pct": -1.57
-      }
-    },
-    "EIX": {
-      "vol_ratio": 5.63,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "ELV": {
-      "vol_ratio": 0.9,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "ETH-USD": {
       "vol_ratio": 0.69,
       "vol_confirms": false,
       "spring": {
@@ -319,17 +67,17 @@
         "depth_pct": null
       }
     },
-    "EXR": {
-      "vol_ratio": 1.21,
+    "AON": {
+      "vol_ratio": 1.73,
       "vol_confirms": true,
       "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
+        "happened": true,
+        "weeks_ago": 10,
+        "depth_pct": -1.76
       }
     },
-    "FSLR": {
-      "vol_ratio": 1.07,
+    "APD": {
+      "vol_ratio": 0.78,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -337,25 +85,43 @@
         "depth_pct": null
       }
     },
-    "FTV": {
-      "vol_ratio": 1.21,
+    "AVY": {
+      "vol_ratio": 1.22,
       "vol_confirms": true,
       "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -3.07
       }
     },
-    "GPC": {
-      "vol_ratio": 0.79,
+    "AWK": {
+      "vol_ratio": 0.93,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -0.69
+        "weeks_ago": 5,
+        "depth_pct": -0.63
       }
     },
-    "GPN": {
+    "AZO": {
+      "vol_ratio": 1.98,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -4.84
+      }
+    },
+    "BA": {
+      "vol_ratio": 0.71,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "BALL": {
       "vol_ratio": 0.98,
       "vol_confirms": false,
       "spring": {
@@ -364,16 +130,331 @@
         "depth_pct": null
       }
     },
-    "HD": {
-      "vol_ratio": 1.0,
+    "BDX": {
+      "vol_ratio": 0.72,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -1.74
+      }
+    },
+    "BIIB": {
+      "vol_ratio": 0.74,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -0.37
+      }
+    },
+    "BKNG": {
+      "vol_ratio": 1.16,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "BX": {
+      "vol_ratio": 0.78,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 7,
+        "depth_pct": -0.58
+      }
+    },
+    "BXP": {
+      "vol_ratio": 0.72,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CARR": {
+      "vol_ratio": 0.93,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 1,
+        "depth_pct": -3.2
+      }
+    },
+    "CDNS": {
+      "vol_ratio": 1.3,
+      "vol_confirms": true,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CHD": {
+      "vol_ratio": 1.04,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CI": {
+      "vol_ratio": 0.93,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 9,
+        "depth_pct": -5.2
+      }
+    },
+    "CL": {
+      "vol_ratio": 0.85,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CMS": {
+      "vol_ratio": 1.02,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CNC": {
+      "vol_ratio": 0.71,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -0.63
+      }
+    },
+    "COIN": {
+      "vol_ratio": 0.71,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 1,
+        "depth_pct": -6.52
+      }
+    },
+    "CPT": {
+      "vol_ratio": 0.97,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CRH": {
+      "vol_ratio": 1.02,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "CRM": {
+      "vol_ratio": 1.01,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 2,
+        "depth_pct": -14.97
+      }
+    },
+    "DG": {
+      "vol_ratio": 0.81,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 1,
+        "depth_pct": -4.19
+      }
+    },
+    "DHI": {
+      "vol_ratio": 1.08,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -1.41
+      }
+    },
+    "DHR": {
+      "vol_ratio": 0.83,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "DIS": {
+      "vol_ratio": 0.83,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -2.03
+      }
+    },
+    "DLTR": {
+      "vol_ratio": 1.06,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 11,
+        "depth_pct": -2.31
+      }
+    },
+    "DOV": {
+      "vol_ratio": 1.2,
+      "vol_confirms": true,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "EG": {
+      "vol_ratio": 1.15,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 11,
+        "depth_pct": -1.57
+      }
+    },
+    "EIX": {
+      "vol_ratio": 1.77,
+      "vol_confirms": true,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "ELV": {
+      "vol_ratio": 0.97,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -5.24
+      }
+    },
+    "ETH-USD": {
+      "vol_ratio": 0.74,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 1,
+        "depth_pct": -5.82
+      }
+    },
+    "EW": {
+      "vol_ratio": 0.8,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "EXE": {
+      "vol_ratio": 0.8,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 6,
+        "depth_pct": -0.19
+      }
+    },
+    "EXR": {
+      "vol_ratio": 1.37,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -0.66
+      }
+    },
+    "FSLR": {
+      "vol_ratio": 1.28,
+      "vol_confirms": true,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "FTV": {
+      "vol_ratio": 0.6,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -0.91
+      }
+    },
+    "GPC": {
+      "vol_ratio": 0.65,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -0.69
+      }
+    },
+    "GPN": {
+      "vol_ratio": 0.75,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "HD": {
+      "vol_ratio": 1.08,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
         "depth_pct": -1.0
       }
     },
     "HON": {
+      "vol_ratio": 0.61,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -0.2
+      }
+    },
+    "HSY": {
+      "vol_ratio": 0.72,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -3.33
+      }
+    },
+    "IDXX": {
       "vol_ratio": 0.92,
       "vol_confirms": false,
       "spring": {
@@ -382,39 +463,30 @@
         "depth_pct": null
       }
     },
-    "HSY": {
-      "vol_ratio": 1.0,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -3.33
-      }
-    },
-    "IDXX": {
-      "vol_ratio": 1.23,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "INVH": {
-      "vol_ratio": 0.83,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -0.01
-      }
-    },
-    "IP": {
-      "vol_ratio": 1.04,
+    "IFF": {
+      "vol_ratio": 0.89,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 6,
+        "depth_pct": -2.78
+      }
+    },
+    "INVH": {
+      "vol_ratio": 1.11,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -0.01
+      }
+    },
+    "IP": {
+      "vol_ratio": 0.87,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 7,
         "depth_pct": -5.73
       }
     },
@@ -423,93 +495,75 @@
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 1,
+        "weeks_ago": 2,
         "depth_pct": -0.43
       }
     },
     "JKHY": {
-      "vol_ratio": 0.96,
+      "vol_ratio": 0.85,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
+        "weeks_ago": 3,
         "depth_pct": -7.92
       }
     },
     "KDP": {
-      "vol_ratio": 0.82,
+      "vol_ratio": 0.87,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
+        "weeks_ago": 3,
         "depth_pct": -1.31
       }
     },
     "KKR": {
-      "vol_ratio": 1.01,
+      "vol_ratio": 0.77,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 5,
+        "weeks_ago": 6,
         "depth_pct": -1.34
       }
     },
-    "KMB": {
-      "vol_ratio": 1.11,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
     "KR": {
-      "vol_ratio": 1.01,
-      "vol_confirms": false,
+      "vol_ratio": 1.46,
+      "vol_confirms": true,
       "spring": {
         "happened": true,
-        "weeks_ago": 9,
+        "weeks_ago": 10,
         "depth_pct": -0.25
       }
     },
     "LDOS": {
-      "vol_ratio": 1.38,
+      "vol_ratio": 1.22,
       "vol_confirms": true,
       "spring": {
         "happened": true,
-        "weeks_ago": 0,
+        "weeks_ago": 1,
         "depth_pct": -1.43
       }
     },
-    "LINK-USD": {
-      "vol_ratio": 0.66,
-      "vol_confirms": false,
+    "LHX": {
+      "vol_ratio": 1.27,
+      "vol_confirms": true,
       "spring": {
         "happened": false,
         "weeks_ago": null,
         "depth_pct": null
       }
     },
-    "LOW": {
-      "vol_ratio": 1.4,
-      "vol_confirms": true,
+    "LINK-USD": {
+      "vol_ratio": 0.72,
+      "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -6.11
-      }
-    },
-    "LVS": {
-      "vol_ratio": 1.21,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 5,
-        "depth_pct": -3.83
+        "weeks_ago": 1,
+        "depth_pct": -13.46
       }
     },
     "LYB": {
-      "vol_ratio": 0.68,
+      "vol_ratio": 0.65,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -518,43 +572,52 @@
       }
     },
     "MAA": {
-      "vol_ratio": 0.99,
+      "vol_ratio": 1.16,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 3,
+        "weeks_ago": 4,
         "depth_pct": -1.39
       }
     },
+    "MAS": {
+      "vol_ratio": 1.09,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
     "MCD": {
-      "vol_ratio": 1.48,
-      "vol_confirms": true,
+      "vol_ratio": 1.13,
+      "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 9,
+        "weeks_ago": 10,
         "depth_pct": -3.65
       }
     },
     "MCHP": {
-      "vol_ratio": 0.97,
+      "vol_ratio": 0.85,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 0,
-        "depth_pct": -1.39
+        "depth_pct": -0.74
       }
     },
     "MDLZ": {
-      "vol_ratio": 1.05,
+      "vol_ratio": 0.9,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -0.44
+        "weeks_ago": 0,
+        "depth_pct": -3.13
       }
     },
     "MGM": {
-      "vol_ratio": 0.52,
+      "vol_ratio": 0.63,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -563,7 +626,7 @@
       }
     },
     "MLM": {
-      "vol_ratio": 1.96,
+      "vol_ratio": 1.64,
       "vol_confirms": true,
       "spring": {
         "happened": false,
@@ -572,16 +635,16 @@
       }
     },
     "MRSH": {
-      "vol_ratio": 0.95,
+      "vol_ratio": 0.77,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 1,
+        "weeks_ago": 2,
         "depth_pct": -0.5
       }
     },
     "MSCI": {
-      "vol_ratio": 0.82,
+      "vol_ratio": 0.8,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -590,42 +653,105 @@
       }
     },
     "MTD": {
-      "vol_ratio": 1.26,
-      "vol_confirms": true,
+      "vol_ratio": 0.96,
+      "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 6,
+        "weeks_ago": 7,
         "depth_pct": -6.15
       }
     },
     "NFLX": {
-      "vol_ratio": 0.93,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 5,
-        "depth_pct": -1.91
-      }
-    },
-    "NOC": {
-      "vol_ratio": 1.14,
+      "vol_ratio": 0.63,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 6,
+        "depth_pct": -1.91
+      }
+    },
+    "NOC": {
+      "vol_ratio": 1.01,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 7,
         "depth_pct": -3.27
       }
     },
     "NOW": {
-      "vol_ratio": 1.12,
+      "vol_ratio": 0.67,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 2,
+        "depth_pct": -14.3
+      }
+    },
+    "ODFL": {
+      "vol_ratio": 0.77,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 1,
-        "depth_pct": -14.3
+        "depth_pct": -0.92
       }
     },
-    "NXPI": {
+    "OMC": {
+      "vol_ratio": 0.68,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -2.3
+      }
+    },
+    "ON": {
+      "vol_ratio": 1.08,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -2.76
+      }
+    },
+    "ORCL": {
+      "vol_ratio": 2.28,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 1,
+        "depth_pct": -4.65
+      }
+    },
+    "ORLY": {
+      "vol_ratio": 1.01,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "PAYX": {
+      "vol_ratio": 0.76,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 6,
+        "depth_pct": -0.11
+      }
+    },
+    "PEG": {
+      "vol_ratio": 0.9,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "PEP": {
       "vol_ratio": 1.13,
       "vol_confirms": false,
       "spring": {
@@ -634,98 +760,26 @@
         "depth_pct": null
       }
     },
-    "ODFL": {
-      "vol_ratio": 1.53,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 0,
-        "depth_pct": -0.92
-      }
-    },
-    "OMC": {
-      "vol_ratio": 0.86,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 5,
-        "depth_pct": -2.2
-      }
-    },
-    "ON": {
-      "vol_ratio": 1.03,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "ORCL": {
-      "vol_ratio": 1.15,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 0,
-        "depth_pct": -4.65
-      }
-    },
-    "PAYX": {
-      "vol_ratio": 0.91,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 5,
-        "depth_pct": -0.11
-      }
-    },
-    "PEG": {
-      "vol_ratio": 1.6,
-      "vol_confirms": true,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
-    "PEP": {
-      "vol_ratio": 1.14,
-      "vol_confirms": false,
-      "spring": {
-        "happened": false,
-        "weeks_ago": null,
-        "depth_pct": null
-      }
-    },
     "PFE": {
-      "vol_ratio": 0.99,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 3,
-        "depth_pct": -0.77
-      }
-    },
-    "PG": {
-      "vol_ratio": 1.05,
-      "vol_confirms": false,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 6,
-        "depth_pct": -1.11
-      }
-    },
-    "PPG": {
-      "vol_ratio": 0.89,
+      "vol_ratio": 0.71,
       "vol_confirms": false,
       "spring": {
         "happened": true,
         "weeks_ago": 4,
-        "depth_pct": -5.37
+        "depth_pct": -0.77
+      }
+    },
+    "PG": {
+      "vol_ratio": 1.2,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 7,
+        "depth_pct": -1.11
       }
     },
     "PSA": {
-      "vol_ratio": 1.15,
+      "vol_ratio": 0.78,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -734,21 +788,30 @@
       }
     },
     "REGN": {
-      "vol_ratio": 0.96,
+      "vol_ratio": 0.65,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 4,
+        "weeks_ago": 5,
         "depth_pct": -3.2
       }
     },
     "RMD": {
-      "vol_ratio": 1.23,
-      "vol_confirms": true,
+      "vol_ratio": 1.02,
+      "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 3,
-        "depth_pct": -2.57
+        "weeks_ago": 0,
+        "depth_pct": -0.04
+      }
+    },
+    "SBUX": {
+      "vol_ratio": 0.78,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
       }
     },
     "SHW": {
@@ -756,21 +819,30 @@
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 6,
+        "weeks_ago": 7,
         "depth_pct": -1.06
       }
     },
+    "SJM": {
+      "vol_ratio": 0.79,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 7,
+        "depth_pct": -0.82
+      }
+    },
     "SMCI": {
-      "vol_ratio": 1.42,
+      "vol_ratio": 1.2,
       "vol_confirms": true,
       "spring": {
         "happened": true,
         "weeks_ago": 0,
-        "depth_pct": -7.29
+        "depth_pct": -3.16
       }
     },
     "SOL-USD": {
-      "vol_ratio": 0.74,
+      "vol_ratio": 0.66,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -779,43 +851,52 @@
       }
     },
     "SPGI": {
-      "vol_ratio": 1.33,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 2,
-        "depth_pct": -1.25
-      }
-    },
-    "STE": {
-      "vol_ratio": 1.01,
+      "vol_ratio": 0.89,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 4,
-        "depth_pct": -1.35
+        "weeks_ago": 3,
+        "depth_pct": -1.25
       }
     },
-    "SWKS": {
-      "vol_ratio": 2.58,
-      "vol_confirms": true,
+    "SRE": {
+      "vol_ratio": 0.73,
+      "vol_confirms": false,
       "spring": {
         "happened": false,
         "weeks_ago": null,
         "depth_pct": null
       }
     },
-    "SYK": {
-      "vol_ratio": 1.35,
+    "STE": {
+      "vol_ratio": 0.9,
+      "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -1.35
+      }
+    },
+    "SW": {
+      "vol_ratio": 0.68,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "SWKS": {
+      "vol_ratio": 2.31,
       "vol_confirms": true,
       "spring": {
         "happened": true,
-        "weeks_ago": 1,
-        "depth_pct": -1.07
+        "weeks_ago": 0,
+        "depth_pct": -9.65
       }
     },
     "TDG": {
-      "vol_ratio": 1.05,
+      "vol_ratio": 1.04,
       "vol_confirms": false,
       "spring": {
         "happened": false,
@@ -824,26 +905,35 @@
       }
     },
     "TECH": {
-      "vol_ratio": 1.16,
+      "vol_ratio": 1.19,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 10,
+        "weeks_ago": 11,
         "depth_pct": -18.08
       }
     },
     "TMUS": {
-      "vol_ratio": 1.0,
+      "vol_ratio": 0.76,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 2,
+        "weeks_ago": 3,
         "depth_pct": -2.04
       }
     },
     "TRMB": {
-      "vol_ratio": 4.67,
-      "vol_confirms": true,
+      "vol_ratio": 1.07,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
+    "TROW": {
+      "vol_ratio": 0.71,
+      "vol_confirms": false,
       "spring": {
         "happened": false,
         "weeks_ago": null,
@@ -851,7 +941,7 @@
       }
     },
     "TSN": {
-      "vol_ratio": 1.83,
+      "vol_ratio": 1.39,
       "vol_confirms": true,
       "spring": {
         "happened": false,
@@ -860,7 +950,16 @@
       }
     },
     "TXT": {
-      "vol_ratio": 1.53,
+      "vol_ratio": 1.44,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 0,
+        "depth_pct": -3.34
+      }
+    },
+    "UBER": {
+      "vol_ratio": 1.61,
       "vol_confirms": true,
       "spring": {
         "happened": false,
@@ -869,8 +968,8 @@
       }
     },
     "UDR": {
-      "vol_ratio": 0.91,
-      "vol_confirms": false,
+      "vol_ratio": 1.48,
+      "vol_confirms": true,
       "spring": {
         "happened": false,
         "weeks_ago": null,
@@ -878,35 +977,26 @@
       }
     },
     "UHS": {
-      "vol_ratio": 0.95,
+      "vol_ratio": 0.96,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 1,
-        "depth_pct": -0.69
+        "weeks_ago": 0,
+        "depth_pct": -1.82
       }
     },
-    "UNH": {
-      "vol_ratio": 0.84,
-      "vol_confirms": false,
+    "VICI": {
+      "vol_ratio": 1.21,
+      "vol_confirms": true,
       "spring": {
         "happened": false,
         "weeks_ago": null,
         "depth_pct": null
       }
     },
-    "VICI": {
-      "vol_ratio": 1.65,
-      "vol_confirms": true,
-      "spring": {
-        "happened": true,
-        "weeks_ago": 12,
-        "depth_pct": -2.03
-      }
-    },
     "VMC": {
-      "vol_ratio": 1.36,
-      "vol_confirms": true,
+      "vol_ratio": 0.97,
+      "vol_confirms": false,
       "spring": {
         "happened": false,
         "weeks_ago": null,
@@ -914,7 +1004,7 @@
       }
     },
     "VMRK": {
-      "vol_ratio": 2.47,
+      "vol_ratio": 2.63,
       "vol_confirms": true,
       "spring": {
         "happened": false,
@@ -922,27 +1012,54 @@
         "depth_pct": null
       }
     },
+    "WM": {
+      "vol_ratio": 1.08,
+      "vol_confirms": false,
+      "spring": {
+        "happened": false,
+        "weeks_ago": null,
+        "depth_pct": null
+      }
+    },
     "WYNN": {
-      "vol_ratio": 1.43,
+      "vol_ratio": 1.38,
       "vol_confirms": true,
       "spring": {
         "happened": true,
-        "weeks_ago": 6,
+        "weeks_ago": 7,
         "depth_pct": -3.56
       }
     },
     "XLM-USD": {
-      "vol_ratio": 0.81,
+      "vol_ratio": 1.02,
       "vol_confirms": false,
       "spring": {
         "happened": true,
-        "weeks_ago": 0,
+        "weeks_ago": 1,
         "depth_pct": -7.51
       }
     },
-    "ZBH": {
-      "vol_ratio": 0.82,
+    "XRP-USD": {
+      "vol_ratio": 0.86,
       "vol_confirms": false,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 3,
+        "depth_pct": -19.6
+      }
+    },
+    "XYL": {
+      "vol_ratio": 2.07,
+      "vol_confirms": true,
+      "spring": {
+        "happened": true,
+        "weeks_ago": 5,
+        "depth_pct": -0.67
+      }
+    },
+    "YUM": {
+      "vol_ratio": 1.21,
+      "vol_confirms": true,
       "spring": {
         "happened": false,
         "weeks_ago": null,
